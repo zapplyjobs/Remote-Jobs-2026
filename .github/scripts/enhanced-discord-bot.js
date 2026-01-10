@@ -577,9 +577,12 @@ client.once('ready', async () => {
 
       console.log('\n✅ Using legacy single-channel mode (zapply-jobs-updates)');
 
-      console.log('✅ Channel auto-discovery complete!');
-      console.log(`📍 Discovered ${Object.keys(global.CHANNEL_CONFIG).length} functional channels`);
-      console.log(`📍 Discovered ${Object.keys(global.LOCATION_CHANNEL_CONFIG).length} location channels`);
+      // Initialize empty configs for legacy mode
+      global.CHANNEL_CONFIG = {};
+      global.LOCATION_CHANNEL_CONFIG = {};
+
+      console.log('✅ Bot initialized in single-channel mode');
+      console.log(`📍 Using DISCORD_CHANNEL_ID: ${LEGACY_CHANNEL_ID}`);
     } catch (error) {
       console.error(`❌ Failed to fetch guild channels: ${error.message}`);
       console.error(`   Error code: ${error.code}`);
