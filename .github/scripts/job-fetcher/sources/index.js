@@ -1,47 +1,61 @@
 /**
- * ATS Sources - Unified Interface
+ * Job Sources - Unified Interface
  *
- * Fetches jobs from all configured ATS platforms:
- * - Greenhouse
- * - Lever
- * - Ashby
+ * Fetches jobs from all configured sources:
+ * - RemoteOK (remote job board)
+ * - Greenhouse (ATS)
+ * - Lever (ATS)
+ * - Ashby (ATS)
  *
  * All APIs are public and require no authentication.
  */
 
+const { fetchRemoteOKJobs } = require('./remoteok');
 const { fetchAllGreenhouseJobs } = require('./greenhouse');
 const { fetchAllLeverJobs } = require('./lever');
 const { fetchAllAshbyJobs } = require('./ashby');
 const companyList = require('./company-list.json');
 
 /**
- * Fetch jobs from all ATS platforms
+ * Fetch jobs from all configured sources
  * @param {Object} options - Configuration options
  * @param {number} options.delayMs - Delay between API calls (default: 500ms)
- * @param {boolean} options.includeGreenhouse - Fetch from Greenhouse (default: true)
- * @param {boolean} options.includeLever - Fetch from Lever (default: true)
- * @param {boolean} options.includeAshby - Fetch from Ashby (default: true)
+ * @param {boolean} options.includeRemoteOK - Fetch from RemoteOK (default: true)
+ * @param {boolean} options.includeGreenhouse - Fetch from Greenhouse (default: false - disabled for Remote-Jobs-2026)
+ * @param {boolean} options.includeLever - Fetch from Lever (default: false - disabled for Remote-Jobs-2026)
+ * @param {boolean} options.includeAshby - Fetch from Ashby (default: false - disabled for Remote-Jobs-2026)
  * @returns {Promise<Object>} Object with jobs array and stats
  */
 async function fetchAllATSJobs(options = {}) {
     const {
         delayMs = 500,
-        includeGreenhouse = true,
-        includeLever = true,
-        includeAshby = true
+        includeRemoteOK = true,
+        includeGreenhouse = false,
+        includeLever = false,
+        includeAshby = false
     } = options;
 
     console.log('\n' + '═'.repeat(50));
-    console.log('📡 ATS Job Fetcher - Starting collection');
+    console.log('📡 Job Fetcher - Starting collection');
     console.log('═'.repeat(50));
 
     const allJobs = [];
     const stats = {
+        remoteok: { jobs: 0 },
         greenhouse: { companies: 0, jobs: 0 },
         lever: { companies: 0, jobs: 0 },
         ashby: { companies: 0, jobs: 0 },
         total: { companies: 0, jobs: 0 }
     };
+
+    // Fetch from RemoteOK
+    if (includeRemoteOK) {
+        console.log('\n📡 Fetching from RemoteOK...');
+        const remoteOKJobs = await fetchRemoteOKJobs();
+        allJobs.push(...remoteOKJobs);
+        stats.remoteok.jobs = remoteOKJobs.length;
+        console.log(`✅ RemoteOK: ${remoteOKJobs.length} jobs fetched`);
+    }
 
     // Fetch from Greenhouse
     if (includeGreenhouse && companyList.greenhouse?.length > 0) {
@@ -73,12 +87,19 @@ async function fetchAllATSJobs(options = {}) {
 
     // Summary
     console.log('\n' + '─'.repeat(50));
-    console.log('📊 ATS Fetcher Summary:');
-    console.log(`   Greenhouse: ${stats.greenhouse.jobs} jobs from ${stats.greenhouse.companies} companies`);
-    console.log(`   Lever: ${stats.lever.jobs} jobs from ${stats.lever.companies} companies`);
-    console.log(`   Ashby: ${stats.ashby.jobs} jobs from ${stats.ashby.companies} companies`);
+    console.log('📊 Job Fetcher Summary:');
+    console.log(`   RemoteOK: ${stats.remoteok.jobs} jobs`);
+    if (stats.greenhouse.jobs > 0) {
+        console.log(`   Greenhouse: ${stats.greenhouse.jobs} jobs from ${stats.greenhouse.companies} companies`);
+    }
+    if (stats.lever.jobs > 0) {
+        console.log(`   Lever: ${stats.lever.jobs} jobs from ${stats.lever.companies} companies`);
+    }
+    if (stats.ashby.jobs > 0) {
+        console.log(`   Ashby: ${stats.ashby.jobs} jobs from ${stats.ashby.companies} companies`);
+    }
     console.log(`   ─────────────────────────`);
-    console.log(`   TOTAL: ${stats.total.jobs} jobs from ${stats.total.companies} companies`);
+    console.log(`   TOTAL: ${stats.total.jobs} jobs from ${stats.total.companies} companies (+ ${stats.remoteok.jobs} from RemoteOK)`);
     console.log('═'.repeat(50) + '\n');
 
     return {
@@ -114,6 +135,7 @@ module.exports = {
     addCompany,
 
     // Re-export individual fetchers for direct use
+    fetchRemoteOKJobs,
     fetchAllGreenhouseJobs,
     fetchAllLeverJobs,
     fetchAllAshbyJobs

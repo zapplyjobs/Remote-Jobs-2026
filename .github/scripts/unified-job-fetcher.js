@@ -74,29 +74,37 @@ async function fetchAllJobs() {
     console.error(`❌ Primary data source failed:`, error.message);
   }
 
-  // === Part 3: Fetch from ATS platforms (Greenhouse, Lever, Ashby) ===
-  console.log('\n📡 Fetching from ATS platforms...');
+  // === Part 3: Fetch from RemoteOK + ATS platforms (Greenhouse, Lever, Ashby) ===
+  console.log('\n📡 Fetching from all job sources...');
 
   try {
-    const { jobs: atsJobs, stats: atsStats } = await fetchAllATSJobs({ delayMs: 500 });
+    const { jobs: sourceJobs, stats: sourceStats } = await fetchAllATSJobs({ delayMs: 500 });
 
-    // Normalize ATS jobs to match expected format
-    const normalizedATSJobs = atsJobs.map(job => ({
-      // Map to legacy format expected by downstream processors
-      job_title: job.title,
-      employer_name: job.company_name,
-      job_city: job.location,
-      job_apply_link: job.url,
-      job_posted_at_datetime_utc: job.posted_at,
-      job_description: job.description,
-      // Keep original fields for reference
-      ...job
-    }));
+    // Normalize jobs to match expected format
+    // Note: RemoteOK jobs are already in correct format, only ATS jobs need normalization
+    const normalizedJobs = sourceJobs.map(job => {
+      // If job already has correct schema (from RemoteOK), return as-is
+      if (job.job_title && job.employer_name) {
+        return job;
+      }
 
-    allJobs.push(...normalizedATSJobs);
-    console.log(`📊 After ATS sources: ${allJobs.length} jobs total`);
+      // Otherwise normalize ATS jobs
+      return {
+        job_title: job.title,
+        employer_name: job.company_name,
+        job_city: job.location,
+        job_apply_link: job.url,
+        job_posted_at_datetime_utc: job.posted_at,
+        job_description: job.description,
+        // Keep original fields for reference
+        ...job
+      };
+    });
+
+    allJobs.push(...normalizedJobs);
+    console.log(`📊 After all sources: ${allJobs.length} jobs total`);
   } catch (error) {
-    console.error(`❌ ATS sources failed:`, error.message);
+    console.error(`❌ Job sources failed:`, error.message);
   }
 
   // === Part 5: Filter to US-only jobs ===
