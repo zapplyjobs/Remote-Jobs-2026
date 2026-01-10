@@ -542,35 +542,40 @@ client.once('ready', async () => {
       await guild.channels.fetch();
       console.log(`✅ Loaded ${guild.channels.cache.size} channels from guild`);
 
-      // Initialize channel auto-discovery
-      console.log('\n🔍 Initializing channel auto-discovery...');
-      channelDiscovery = new ChannelDiscovery(client, GUILD_ID);
-      await channelDiscovery.discoverChannels();
+      // DISABLED: Channel auto-discovery (Remote-Jobs-2026 uses single-channel mode)
+      // Remote-Jobs-2026 uses zapply-jobs-updates forum channel (ID in DISCORD_CHANNEL_ID secret)
+      // No multi-channel routing needed
+      //
+      // console.log('\n🔍 Initializing channel auto-discovery...');
+      // channelDiscovery = new ChannelDiscovery(client, GUILD_ID);
+      // await channelDiscovery.discoverChannels();
+      //
+      // // Validate all required channels exist
+      // if (!channelDiscovery.validateRequiredChannels(ALL_REQUIRED_CHANNELS)) {
+      //   console.error('❌ Missing required channels - bot cannot start');
+      //   console.error('Please create all channels listed in config.js');
+      //   client.destroy();
+      //   process.exit(1);
+      // }
+      //
+      // // Build CHANNEL_CONFIG from discovered channels
+      // global.CHANNEL_CONFIG = {};
+      // FUNCTIONAL_CHANNELS.forEach(channelName => {
+      //   const channelId = channelDiscovery.getChannelId(channelName);
+      //   if (channelId) {
+      //     global.CHANNEL_CONFIG[channelName] = channelId;
+      //   }
+      // });
+      //
+      // global.LOCATION_CHANNEL_CONFIG = {};
+      // LOCATION_CHANNELS.forEach(channelName => {
+      //   const channelId = channelDiscovery.getChannelId(channelName);
+      //   if (channelId) {
+      //     global.LOCATION_CHANNEL_CONFIG[channelName] = channelId;
+      //   }
+      // });
 
-      // Validate all required channels exist
-      if (!channelDiscovery.validateRequiredChannels(ALL_REQUIRED_CHANNELS)) {
-        console.error('❌ Missing required channels - bot cannot start');
-        console.error('Please create all channels listed in config.js');
-        client.destroy();
-        process.exit(1);
-      }
-
-      // Build CHANNEL_CONFIG from discovered channels
-      global.CHANNEL_CONFIG = {};
-      FUNCTIONAL_CHANNELS.forEach(channelName => {
-        const channelId = channelDiscovery.getChannelId(channelName);
-        if (channelId) {
-          global.CHANNEL_CONFIG[channelName] = channelId;
-        }
-      });
-
-      global.LOCATION_CHANNEL_CONFIG = {};
-      LOCATION_CHANNELS.forEach(channelName => {
-        const channelId = channelDiscovery.getChannelId(channelName);
-        if (channelId) {
-          global.LOCATION_CHANNEL_CONFIG[channelName] = channelId;
-        }
-      });
+      console.log('\n✅ Using legacy single-channel mode (zapply-jobs-updates)');
 
       console.log('✅ Channel auto-discovery complete!');
       console.log(`📍 Discovered ${Object.keys(global.CHANNEL_CONFIG).length} functional channels`);
