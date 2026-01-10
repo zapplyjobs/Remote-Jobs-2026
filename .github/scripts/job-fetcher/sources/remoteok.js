@@ -8,10 +8,13 @@
  * - Authentication: None required (public API)
  * - Rate Limit: Undocumented (use reasonable delays)
  * - Attribution: Required (dofollow backlinks)
+ * - Date Format: ISO 8601 strings (e.g., "2026-01-09T12:00:32+00:00")
  *
- * Data Quality:
- * - ~21K total jobs
- * - ~17K US-based jobs (80%+ US coverage)
+ * Data Quality (Tested 2026-01-10):
+ * - API returns ~100 jobs (recent postings only, not full 21K database)
+ * - ~25% US-based jobs after location filtering
+ * - ~4-10 Entry/Mid-level jobs after experience filtering
+ * - NOTE: May need pagination or different endpoint for full job database
  * - Filters: US locations, Entry/Mid-level roles
  */
 
@@ -145,6 +148,38 @@ function normalizeRemoteOKJob(job) {
   const location = (job.location || 'remote').toLowerCase().replace(/\s+/g, '-');
   const uniqueId = `remoteok-${company}-${title}-${location}`.substring(0, 100);
 
+  // Safe date parsing - handle ISO 8601 strings and edge cases
+  let jobDate;
+  try {
+    if (job.date) {
+      // RemoteOK returns ISO 8601 strings (e.g., "2026-01-09T12:00:32+00:00")
+      // Also handle Unix timestamps (seconds) as fallback
+      let timestamp;
+
+      if (typeof job.date === 'string') {
+        // ISO 8601 string format
+        timestamp = Date.parse(job.date);
+      } else if (typeof job.date === 'number') {
+        // Unix timestamp (seconds since epoch)
+        timestamp = job.date * 1000;
+      } else {
+        timestamp = NaN;
+      }
+
+      if (isNaN(timestamp)) {
+        console.warn(`⚠️ Invalid date for job ${job.id || job.slug}: ${job.date}`);
+        jobDate = new Date().toISOString();
+      } else {
+        jobDate = new Date(timestamp).toISOString();
+      }
+    } else {
+      jobDate = new Date().toISOString();
+    }
+  } catch (error) {
+    console.warn(`⚠️ Date parsing error for job ${job.id || job.slug}:`, error.message);
+    jobDate = new Date().toISOString();
+  }
+
   return {
     // Identifiers
     id: uniqueId,
@@ -158,7 +193,7 @@ function normalizeRemoteOKJob(job) {
     job_apply_link: job.url || `https://remoteok.com/remote-jobs/${job.id}/${job.slug}`,
     job_description: job.description,
     job_employment_type: 'FULLTIME', // RemoteOK doesn't specify, assume full-time
-    job_posted_at_datetime_utc: job.date ? new Date(job.date * 1000).toISOString() : new Date().toISOString(),
+    job_posted_at_datetime_utc: jobDate,
 
     // Location
     location: job.location || 'Remote',
