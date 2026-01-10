@@ -542,47 +542,39 @@ client.once('ready', async () => {
       await guild.channels.fetch();
       console.log(`✅ Loaded ${guild.channels.cache.size} channels from guild`);
 
-      // DISABLED: Channel auto-discovery (Remote-Jobs-2026 uses single-channel mode)
-      // Remote-Jobs-2026 uses zapply-jobs-updates forum channel (ID in DISCORD_CHANNEL_ID secret)
-      // No multi-channel routing needed
-      //
-      // console.log('\n🔍 Initializing channel auto-discovery...');
-      // channelDiscovery = new ChannelDiscovery(client, GUILD_ID);
-      // await channelDiscovery.discoverChannels();
-      //
-      // // Validate all required channels exist
-      // if (!channelDiscovery.validateRequiredChannels(ALL_REQUIRED_CHANNELS)) {
-      //   console.error('❌ Missing required channels - bot cannot start');
-      //   console.error('Please create all channels listed in config.js');
-      //   client.destroy();
-      //   process.exit(1);
-      // }
-      //
-      // // Build CHANNEL_CONFIG from discovered channels
-      // global.CHANNEL_CONFIG = {};
-      // FUNCTIONAL_CHANNELS.forEach(channelName => {
-      //   const channelId = channelDiscovery.getChannelId(channelName);
-      //   if (channelId) {
-      //     global.CHANNEL_CONFIG[channelName] = channelId;
-      //   }
-      // });
-      //
-      // global.LOCATION_CHANNEL_CONFIG = {};
-      // LOCATION_CHANNELS.forEach(channelName => {
-      //   const channelId = channelDiscovery.getChannelId(channelName);
-      //   if (channelId) {
-      //     global.LOCATION_CHANNEL_CONFIG[channelName] = channelId;
-      //   }
-      // });
+      console.log('\n🔍 Initializing channel auto-discovery...');
+      channelDiscovery = new ChannelDiscovery(client, GUILD_ID);
+      await channelDiscovery.discoverChannels();
 
-      console.log('\n✅ Using legacy single-channel mode (zapply-jobs-updates)');
+      // Validate all required channels exist
+      if (!channelDiscovery.validateRequiredChannels(ALL_REQUIRED_CHANNELS)) {
+        console.error('❌ Missing required channels - bot cannot start');
+        console.error('Please create all channels listed in config.js');
+        client.destroy();
+        process.exit(1);
+      }
 
-      // Initialize empty configs for legacy mode
+      // Build CHANNEL_CONFIG from discovered channels
       global.CHANNEL_CONFIG = {};
-      global.LOCATION_CHANNEL_CONFIG = {};
+      FUNCTIONAL_CHANNELS.forEach(channelName => {
+        const channelId = channelDiscovery.getChannelId(channelName);
+        if (channelId) {
+          global.CHANNEL_CONFIG[channelName] = channelId;
+        }
+      });
 
-      console.log('✅ Bot initialized in single-channel mode');
-      console.log(`📍 Using DISCORD_CHANNEL_ID: ${CHANNEL_ID}`);
+      global.LOCATION_CHANNEL_CONFIG = {};
+      LOCATION_CHANNELS.forEach(channelName => {
+        const channelId = channelDiscovery.getChannelId(channelName);
+        if (channelId) {
+          global.LOCATION_CHANNEL_CONFIG[channelName] = channelId;
+        }
+      });
+
+      console.log('✅ Bot initialized with multi-channel routing');
+      console.log(`📍 Functional channels: ${Object.keys(global.CHANNEL_CONFIG).length}`);
+      console.log(`📍 Location channels: ${Object.keys(global.LOCATION_CHANNEL_CONFIG).length}`);
+      console.log(`📍 Fallback channel ID: ${CHANNEL_ID}`);
     } catch (error) {
       console.error(`❌ Failed to fetch guild channels: ${error.message}`);
       console.error(`   Error code: ${error.code}`);

@@ -43,8 +43,8 @@ const ALL_REQUIRED_CHANNELS = [
 ];
 
 // Mode flags
-const MULTI_CHANNEL_MODE = false;  // DISABLED: Remote-Jobs-2026 uses single-channel mode
-const LOCATION_MODE_ENABLED = false;  // DISABLED: Remote-Jobs-2026 uses single-channel mode
+const MULTI_CHANNEL_MODE = true;  // ENABLED: Route jobs to role-based channels
+const LOCATION_MODE_ENABLED = true;  // ENABLED: Route jobs to location channels
 
 module.exports = {
   FUNCTIONAL_CHANNELS,
