@@ -17,12 +17,16 @@ const {
 } = require('discord.js');
 
 // Import extracted modules
-const { CHANNEL_CONFIG, LOCATION_CHANNEL_CONFIG, LEGACY_CHANNEL_ID, MULTI_CHANNEL_MODE, LOCATION_MODE_ENABLED } = require('./src/discord/config');
+const { FUNCTIONAL_CHANNELS, LOCATION_CHANNELS, ALL_REQUIRED_CHANNELS, MULTI_CHANNEL_MODE, LOCATION_MODE_ENABLED } = require('./src/discord/config');
+const ChannelDiscovery = require('./src/discord/channel-discovery');
 const { getJobChannelDetails, isAIRole, isDataScienceRole, isTechRole, isNonTechRole } = require('./src/routing/router');
 const { normalizeJob } = require('./src/utils/job-normalizer');
 const { formatPostedDate, cleanJobDescription } = require('./src/utils/job-formatters');
 const PostedJobsManager = require('./src/data/posted-jobs-manager-v2');
 const SubscriptionManager = require('./src/data/subscription-manager');
+
+// Global channel discovery instance
+let channelDiscovery = null;
 
 // Environment variables
 const TOKEN = process.env.DISCORD_TOKEN;
@@ -537,13 +541,51 @@ client.once('ready', async () => {
       console.log(`✅ Guild found: ${guild.name}`);
       await guild.channels.fetch();
       console.log(`✅ Loaded ${guild.channels.cache.size} channels from guild`);
+
+      // Initialize channel auto-discovery
+      console.log('\n🔍 Initializing channel auto-discovery...');
+      channelDiscovery = new ChannelDiscovery(client, GUILD_ID);
+      await channelDiscovery.discoverChannels();
+
+      // Validate all required channels exist
+      if (!channelDiscovery.validateRequiredChannels(ALL_REQUIRED_CHANNELS)) {
+        console.error('❌ Missing required channels - bot cannot start');
+        console.error('Please create all channels listed in config.js');
+        client.destroy();
+        process.exit(1);
+      }
+
+      // Build CHANNEL_CONFIG from discovered channels
+      global.CHANNEL_CONFIG = {};
+      FUNCTIONAL_CHANNELS.forEach(channelName => {
+        const channelId = channelDiscovery.getChannelId(channelName);
+        if (channelId) {
+          global.CHANNEL_CONFIG[channelName] = channelId;
+        }
+      });
+
+      global.LOCATION_CHANNEL_CONFIG = {};
+      LOCATION_CHANNELS.forEach(channelName => {
+        const channelId = channelDiscovery.getChannelId(channelName);
+        if (channelId) {
+          global.LOCATION_CHANNEL_CONFIG[channelName] = channelId;
+        }
+      });
+
+      console.log('✅ Channel auto-discovery complete!');
+      console.log(`📍 Discovered ${Object.keys(global.CHANNEL_CONFIG).length} functional channels`);
+      console.log(`📍 Discovered ${Object.keys(global.LOCATION_CHANNEL_CONFIG).length} location channels`);
     } catch (error) {
       console.error(`❌ Failed to fetch guild channels: ${error.message}`);
       console.error(`   Error code: ${error.code}`);
       console.error(`   Full error:`, error);
+      client.destroy();
+      process.exit(1);
     }
   } else {
     console.warn(`⚠️ DISCORD_GUILD_ID not set`);
+    client.destroy();
+    process.exit(1);
   }
 
   // Only register commands if running interactively (not in GitHub Actions)
@@ -793,7 +835,7 @@ client.once('ready', async () => {
     const jobsByChannel = {};
     for (const job of jobsToPost) {
       // Get detailed routing information for debugging
-      const routingInfo = getJobChannelDetails(job, CHANNEL_CONFIG);
+      const routingInfo = getJobChannelDetails(job, global.CHANNEL_CONFIG);
       const channelId = routingInfo.channelId;
 
       if (!channelId || channelId.trim() === '') {

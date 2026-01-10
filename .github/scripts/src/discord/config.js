@@ -42,8 +42,14 @@ const ALL_REQUIRED_CHANNELS = [
   ...LOCATION_CHANNELS
 ];
 
+// Mode flags
+const MULTI_CHANNEL_MODE = true;  // Enable multi-channel routing
+const LOCATION_MODE_ENABLED = true;  // Enable location-based channels
+
 module.exports = {
   FUNCTIONAL_CHANNELS,
   LOCATION_CHANNELS,
-  ALL_REQUIRED_CHANNELS
+  ALL_REQUIRED_CHANNELS,
+  MULTI_CHANNEL_MODE,
+  LOCATION_MODE_ENABLED
 };
