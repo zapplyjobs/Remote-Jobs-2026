@@ -555,11 +555,14 @@ client.once('ready', async () => {
       }
 
       // Build CHANNEL_CONFIG from discovered channels
+      // Strip 'remote-' prefix for routing compatibility (remote-tech → tech)
       global.CHANNEL_CONFIG = {};
       FUNCTIONAL_CHANNELS.forEach(channelName => {
         const channelId = channelDiscovery.getChannelId(channelName);
         if (channelId) {
-          global.CHANNEL_CONFIG[channelName] = channelId;
+          // Map 'remote-tech' → 'tech', 'remote-ai' → 'ai', etc.
+          const routingKey = channelName.replace(/^remote-/, '');
+          global.CHANNEL_CONFIG[routingKey] = channelId;
         }
       });
 
@@ -567,7 +570,9 @@ client.once('ready', async () => {
       LOCATION_CHANNELS.forEach(channelName => {
         const channelId = channelDiscovery.getChannelId(channelName);
         if (channelId) {
-          global.LOCATION_CHANNEL_CONFIG[channelName] = channelId;
+          // Keep location keys as-is (remote-usa, new-york, etc.)
+          const routingKey = channelName.replace(/^remote-/, '');
+          global.LOCATION_CHANNEL_CONFIG[routingKey] = channelId;
         }
       });
 
