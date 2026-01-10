@@ -39,7 +39,7 @@ jobs:
         run: node .github/scripts/daily-stats.js
 
       - name: Pull latest changes before commit
-        run: git pull origin main --rebase --autostash || true
+        run: git pull origin master --rebase --autostash || true
 
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5

@@ -282,15 +282,15 @@ jobs:
 
             # STEP 2: Pull latest remote changes with rebase
             echo "⬇️  Pulling latest changes from remote..."
-            if ! git pull --rebase origin main; then
+            if ! git pull --rebase origin master; then
               echo "⚠️  Rebase conflict detected, aborting rebase..."
               git rebase --abort || true
 
               # Fallback to regular merge
-              git pull origin main --no-edit || {
+              git pull origin master --no-edit || {
                 echo "❌ Pull failed completely, resetting..."
                 git reset --hard HEAD
-                git pull origin main
+                git pull origin master
               }
             fi
 
@@ -347,7 +347,7 @@ jobs:
 
             # STEP 5: Push with retry
             echo "⬆️  Pushing changes to remote..."
-            if git push origin main; then
+            if git push origin master; then
               echo "✅ Successfully pushed changes!"
               exit 0
             else
