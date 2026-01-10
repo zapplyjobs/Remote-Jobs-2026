@@ -6,7 +6,7 @@
 
 <!-- Row 1: Job Stats -->
 ![Total Jobs](https://img.shields.io/badge/Total_Jobs-5-brightgreen?style=flat&logo=briefcase)
-![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
+![Updated](https://img.shields.io/badge/Updated-On_Demand-orange?style=flat&logo=calendar)
 ![License](https://img.shields.io/badge/License-CC--BY--NC--4.0-purple?style=flat&logo=creativecommons)
 
 <!-- Row 2: Repository Stats -->
@@ -24,7 +24,7 @@
 
 </div>
 
-<p align="center">🌍 Remote-first job board featuring entry and mid-level positions from companies hiring in the United States. Powered by RemoteOK's curated job listings, updated every 15 minutes.</p>
+<p align="center">🌍 Remote-first job board featuring entry and mid-level positions from companies hiring in the United States. Powered by RemoteOK's curated job listings, updated on-demand.</p>
 
 <p align="center">🎯 Focus on remote work opportunities across tech, data, product, and other categories.</p>
 
@@ -40,7 +40,7 @@ This repository automatically fetches and posts remote job listings to our Disco
 - ✅ **US-based** - All positions are available to candidates in the United States
 - ✅ **Entry/Mid-Level** - Filtered to exclude senior/staff/principal roles
 - ✅ **Remote-First** - Companies committed to remote work culture
-- ✅ **Auto-Updated** - Fetched every 15 minutes via GitHub Actions
+- ✅ **On-Demand Updates** - Manually triggered via GitHub Actions
 
 ### Job Sources
 
@@ -53,7 +53,7 @@ This repository automatically fetches and posts remote job listings to our Disco
 
 ## How It Works
 
-1. **Job Fetching** - GitHub Actions runs every 15 minutes to fetch new jobs
+1. **Job Fetching** - GitHub Actions can be manually triggered to fetch new jobs
 2. **Filtering** - Jobs are filtered for US locations and entry/mid-level experience
 3. **Discord Posting** - New jobs are automatically posted to categorized Discord channels
 4. **Website Display** - All jobs are displayed on our public website
