@@ -1,9 +1,11 @@
 name: Update Remote Jobs
 
 on:
-  schedule:
-    # Run every 15 minutes to catch new RemoteOK postings
-    - cron: '*/15 * * * *'
+  # schedule:
+  #   # DISABLED: Was running every 15 minutes (96x/day), causing quota exhaustion
+  #   # RemoteOK only provides 24-48h window (~5 jobs), doesn't need frequent polling
+  #   # Re-enable with hourly or 6-hourly schedule if needed: '0 */6 * * *'
+  #   - cron: '*/15 * * * *'
   workflow_dispatch: # Allow manual triggering
   push:
     branches: [ master ]
@@ -51,6 +53,9 @@ jobs:
         cd jobboard
         npm install --production --no-audit --no-fund
         cd ..
+
+    - name: Create logs directory
+      run: mkdir -p .github/logs
 
     - name: Update job listings
       run: node .github/scripts/job-fetcher/index.js 2>&1 | tee .github/logs/job-fetcher.log
