@@ -1,12 +1,12 @@
-name: Update Zapply Jobs
+name: Update Remote Jobs
 
 on:
   schedule:
-    # Run every 15 minutes (GitHub Actions scheduler has 5-15 min jitter for high-frequency schedules)
+    # Run every 15 minutes to catch new RemoteOK postings
     - cron: '*/15 * * * *'
   workflow_dispatch: # Allow manual triggering
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - '.github/scripts/job-fetcher/**'
       - '.github/scripts/unified-job-fetcher.js'
@@ -29,7 +29,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        ref: main  # Always pull latest main branch code
+        ref: master  # Always pull latest master branch code
         fetch-depth: 0  # Fetch full history for proper rebasing
         token: ${{ secrets.GITHUB_TOKEN }}  # Use default token for pushing
 
@@ -55,7 +55,7 @@ jobs:
     - name: Update job listings
       run: node .github/scripts/job-fetcher/index.js 2>&1 | tee .github/logs/job-fetcher.log
       env:
-        PRIMARY_DATA_SOURCE_URL: ${{ secrets.GRAD_JOBS_PROCESSOR_URL }}
+        # RemoteOK API requires no authentication or external data sources
         ENABLE_MARKDOWN_CONVERSION: true  # Feature flag: Set to 'true' to enable HTML-to-Markdown conversion
 
     - name: Display job-fetcher logs (always run)
