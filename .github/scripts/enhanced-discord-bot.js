@@ -582,7 +582,7 @@ client.once('ready', async () => {
       global.LOCATION_CHANNEL_CONFIG = {};
 
       console.log('✅ Bot initialized in single-channel mode');
-      console.log(`📍 Using DISCORD_CHANNEL_ID: ${LEGACY_CHANNEL_ID}`);
+      console.log(`📍 Using DISCORD_CHANNEL_ID: ${CHANNEL_ID}`);
     } catch (error) {
       console.error(`❌ Failed to fetch guild channels: ${error.message}`);
       console.error(`   Error code: ${error.code}`);
