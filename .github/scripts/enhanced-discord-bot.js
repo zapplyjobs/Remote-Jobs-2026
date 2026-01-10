@@ -1083,17 +1083,40 @@ client.once('ready', async () => {
           }
         }
 
-        const messageData = {
-          content,
-          embeds: [embed]
-        };
+        // Check if this is a forum channel
+        if (channel.type === ChannelType.GuildForum) {
+          // Forum channel - create a thread/post
+          const threadName = `${job.job_title} - ${job.employer_name}`;
+          const threadOptions = {
+            name: threadName.substring(0, 100), // Discord limit
+            autoArchiveDuration: 10080, // 7 days
+            message: {
+              content,
+              embeds: [embed]
+            }
+          };
 
-        // Only add components if actionRow has buttons
-        if (actionRow.components.length > 0) {
-          messageData.components = [actionRow];
+          // Add action row if it has buttons
+          if (actionRow.components.length > 0) {
+            threadOptions.message.components = [actionRow];
+          }
+
+          const thread = await channel.threads.create(threadOptions);
+          console.log(`✅ Created forum post: ${threadName} in #${channel.name}`);
+        } else {
+          // Regular text channel - use send()
+          const messageData = {
+            content,
+            embeds: [embed]
+          };
+
+          // Only add components if actionRow has buttons
+          if (actionRow.components.length > 0) {
+            messageData.components = [actionRow];
+          }
+
+          const message = await channel.send(messageData);
         }
-
-        const message = await channel.send(messageData);
 
         // Mark this job as posted AFTER successful posting
         postedJobsManager.markAsPosted(jobId);
