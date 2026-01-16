@@ -1,11 +1,9 @@
 name: Update Remote Jobs
 
 on:
-  # schedule:
-  #   # DISABLED: Was running every 15 minutes (96x/day), causing quota exhaustion
-  #   # RemoteOK only provides 24-48h window (~5 jobs), doesn't need frequent polling
-  #   # Re-enable with hourly or 6-hourly schedule if needed: '0 */6 * * *'
-  #   - cron: '*/15 * * * *'
+  schedule:
+    # Run every 15 minutes - same as New-Grad-Jobs (public repos have unlimited Actions minutes)
+    - cron: '*/15 * * * *'
   workflow_dispatch: # Allow manual triggering
   push:
     branches: [ master ]
