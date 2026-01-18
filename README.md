@@ -126,7 +126,7 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 | 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 2d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129591) |
 | 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 2d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129590) |
 | 🏢 **Bloomerang** | Account Executive Level 2 | Remote 🏠 | 2d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-level-2-bloomerang-1129578) |
-| 🏢 **Skio** | Product Designer 🏠 | San Francisc | 4d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-product-designer-skio-1129544) |
+| 🏢 **Skio** | Product Designer 🏠 | San Francisc | 5d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-product-designer-skio-1129544) |
 
 
 
