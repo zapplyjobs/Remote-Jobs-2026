@@ -1,43 +1,84 @@
 [
   {
     "job": {
-      "id": "remoteok-com-remote-jobs-remote-software-engineer-identity-access-management-zip-1129488",
+      "id": "remoteok-com-remote-jobs-remote-machine-learning-engineer-3d-visionlocalization-bot-auto-1129593",
       "source": "remoteok",
       "source_url": "remoteok.com",
-      "source_id": "1129488",
-      "job_title": "Software Engineer Identity Access Management",
-      "employer_name": "Zip",
-      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-software-engineer-identity-access-management-zip-1129488",
-      "job_description": "The simple task of buying software, services, or tools at work has become hopelessly complicated at even the most innovative companies in the world. Today, enterprises spend $120T+ per year globally (&gt;30 times larger than annual consumer e-commerce spend) and rely on vendors more than ever before to run their businesses.Our cofounders started Zip in 2020 to address this seemingly intractable problem with a purpose-built procurement platform that provides a simple, consumer-grade user experience. Within the last 4 years, Zip has created a new category and developed the leading solution in this $50B+ TAM space. Today, the world’s leading companies like OpenAI, Snowflake, Anthropic, Coinbase, and Prudential rely on Zip to manage billions of dollars in spend.We have a world-class team coming from category-defining companies like Airbnb, Meta, Stripe, Salesforce, Apple, and Google. With a $2.2 billion valuation and $370 million in funding from Y Combinator, Tiger Global, BOND, DST Glob Apply now and work remotely at Zip",
+      "source_id": "1129593",
+      "job_title": "Machine Learning Engineer 3D Vision&Localization",
+      "employer_name": "Bot Auto",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-machine-learning-engineer-3d-visionlocalization-bot-auto-1129593",
+      "job_description": "Why Join Us At Bot Auto, you'll work on cutting-edge autonomous technologies that redefine how self-driving vehicles perceive and navigate the world. You'll collaborate with experts in AI, mapping, and robotics to shape the next generation of intelligent mapping systems. You Will Be part of a multidisciplinary team of research scientists and engineers using an AI-first approach to enable safe self-driving at scale. Design and develop advanced SLAM systems to create, automate, and optimize large-scale 3D map-building pipelines for autonomous trucking environments. Implement robust, precise, and real-time onboard state estimation algorithms capable of maintaining accuracy and robustness under challenging conditions. Build and refine deep-learning-based observation models that enable resilient perception and localization performance across diverse and complex real-world scenarios. Integrate and validate localization and mapping solutions acro Apply now and work remotely at Bot Auto",
       "job_employment_type": "FULLTIME",
-      "job_posted_at_datetime_utc": "2026-01-09T16:00:46.000Z",
-      "location": "San Francisco",
+      "job_posted_at_datetime_utc": "2026-01-16T01:00:04.000Z",
+      "location": "Houston, TX",
       "locations": [
-        "San Francisco"
+        "Houston, TX"
       ],
       "job_country": "USA",
-      "job_city": "San Francisco",
-      "job_state": null,
+      "job_city": "Houston",
+      "job_state": "TX",
       "salary_min": null,
       "salary_max": null,
       "job_min_salary": null,
       "job_max_salary": null,
       "tags": [
-        "software",
-        "frontend",
-        "security",
+        "3d",
+        "robotics",
+        "operational",
+        "engineer"
+      ],
+      "is_remote": true,
+      "job_is_remote": true,
+      "employer_logo": null,
+      "fetched_at": "2026-01-18T01:17:35.684Z",
+      "attribution": {
+        "source": "RemoteOK",
+        "url": "https://remoteok.com",
+        "required": "dofollow backlink"
+      },
+      "job_posted_at": "1h",
+      "description_platform": "generic",
+      "description_success": true
+    },
+    "status": "posted",
+    "addedAt": "2026-01-18T01:17:35.693Z",
+    "enrichedAt": "2026-01-18T01:17:40.951Z",
+    "postedAt": "2026-01-18T01:18:08.851Z"
+  },
+  {
+    "job": {
+      "id": "remoteok-com-remote-jobs-remote-character-artist-clothing-nba-2k-visual-concepts-1129591",
+      "source": "remoteok",
+      "source_url": "remoteok.com",
+      "source_id": "1129591",
+      "job_title": "Character Artist Clothing NBA 2K",
+      "employer_name": "Visual Concepts",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129591",
+      "job_description": "At Visual Concepts, we believe great games are made by diverse and empowered teams with a shared passion for play. As one of the world's top game development studios, we have shipped over 100 multi-sku titles to critical acclaim and commercial success. Our teams are independent and entrepreneurial. Our studios in Novato, Irvine, Budapest, Shanghai, Austin, Boise, Seoul, and Parksville, Canada are committed to artistry and technical innovation, offering top candidates the opportunity to learn and grow with some of the smartest and most creative minds in the industry. What We Need: The NBA 2K character team is a small group of accomplished artists tackling a variety of tasks. We create all of the players, coaches, mascots, clothes and shoes for NBA 2K. In addition to the on-court game assets, we also create the story mode assets, and generate specialty items for the online store. We're looking for an experienced character modeler who wants to contribute to one of the most beloved fra Apply now and work remotely at Visual Concepts",
+      "job_employment_type": "FULLTIME",
+      "job_posted_at_datetime_utc": "2026-01-15T20:00:31.000Z",
+      "location": "Novato, CA",
+      "locations": [
+        "Novato, CA"
+      ],
+      "job_country": "USA",
+      "job_city": "Novato",
+      "job_state": "CA",
+      "salary_min": null,
+      "salary_max": null,
+      "job_min_salary": null,
+      "job_max_salary": null,
+      "tags": [
+        "game",
         "technical",
-        "web",
-        "api",
-        "management",
-        "engineer",
-        "engineering",
-        "e-commerce"
+        "video",
+        "management"
       ],
       "is_remote": true,
       "job_is_remote": true,
       "employer_logo": null,
-      "fetched_at": "2026-01-10T21:08:31.922Z",
+      "fetched_at": "2026-01-18T01:17:35.684Z",
       "attribution": {
         "source": "RemoteOK",
         "url": "https://remoteok.com",
@@ -48,137 +89,43 @@
       "description_success": true
     },
     "status": "posted",
-    "addedAt": "2026-01-10T21:08:31.930Z",
-    "enrichedAt": "2026-01-10T21:08:36.162Z",
-    "postedAt": "2026-01-10T21:08:56.383Z"
+    "addedAt": "2026-01-18T01:17:35.693Z",
+    "enrichedAt": "2026-01-18T01:17:40.951Z",
+    "postedAt": "2026-01-18T01:18:08.851Z"
   },
   {
     "job": {
-      "id": "remoteok-com-remote-jobs-remote-software-engineer-tech-innovations-inc-1129486",
+      "id": "remoteok-com-remote-jobs-remote-character-artist-clothing-nba-2k-visual-concepts-1129590",
       "source": "remoteok",
       "source_url": "remoteok.com",
-      "source_id": "1129486",
-      "job_title": "Software Engineer",
-      "employer_name": "Tech Innovations Inc.",
-      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-software-engineer-tech-innovations-inc-1129486",
-      "job_description": "We are looking for a Software Engineer to join our team. Responsibilities: - Develop and maintain web applications. - Collaborate with cross-functional teams. - Participate in code reviews and maintain code quality. Qualifications: - Bachelor's degree in Computer Science or related field. - 3+ years of experience in software development. - Proficiency in JavaScript, HTML, and CSS. Benefits: - Competitive salary. - Health insurance. - Flexible working hours. Apply now and work remotely at Tech Innovations Inc.",
+      "source_id": "1129590",
+      "job_title": "Character Artist Clothing NBA 2K",
+      "employer_name": "Visual Concepts",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129590",
+      "job_description": "At Visual Concepts, we believe great games are made by diverse and empowered teams with a shared passion for play. As one of the world's top game development studios, we have shipped over 100 multi-sku titles to critical acclaim and commercial success. Our teams are independent and entrepreneurial. Our studios in Novato, Irvine, Budapest, Shanghai, Austin, Boise, Seoul, and Parksville, Canada are committed to artistry and technical innovation, offering top candidates the opportunity to learn and grow with some of the smartest and most creative minds in the industry. Who We Are: The NBA 2K character team is a small group of versatile artists taking on a variety of tasks. We create all of the players, coaches, mascots, clothes and shoes for NBA2K. In addition to the court game assets, we also create the story mode assets, and generate specialty items for the online store What We Need: We are looking for a very hardworking and motivated, Character Artist Intern to join the NBA 2K Apply now and work remotely at Visual Concepts",
       "job_employment_type": "FULLTIME",
-      "job_posted_at_datetime_utc": "2026-01-09T14:00:07.000Z",
-      "location": "San Francisco",
+      "job_posted_at_datetime_utc": "2026-01-15T20:00:20.000Z",
+      "location": "Novato, CA",
       "locations": [
-        "San Francisco"
+        "Novato, CA"
       ],
       "job_country": "USA",
-      "job_city": "San Francisco",
-      "job_state": null,
-      "salary_min": 80000,
-      "salary_max": 120000,
-      "job_min_salary": 80000,
-      "job_max_salary": 120000,
+      "job_city": "Novato",
+      "job_state": "CA",
+      "salary_min": null,
+      "salary_max": null,
+      "job_min_salary": null,
+      "job_max_salary": null,
       "tags": [
-        "software",
-        "code",
-        "web",
-        "health",
-        "engineer"
+        "3d",
+        "game",
+        "technical",
+        "management"
       ],
       "is_remote": true,
       "job_is_remote": true,
       "employer_logo": null,
-      "fetched_at": "2026-01-10T21:08:31.922Z",
-      "attribution": {
-        "source": "RemoteOK",
-        "url": "https://remoteok.com",
-        "required": "dofollow backlink"
-      },
-      "job_posted_at": "1h",
-      "description_platform": "generic",
-      "description_success": true
-    },
-    "status": "posted",
-    "addedAt": "2026-01-10T21:08:31.930Z",
-    "enrichedAt": "2026-01-10T21:08:36.162Z",
-    "postedAt": "2026-01-10T21:08:56.383Z"
-  },
-  {
-    "job": {
-      "id": "remoteok-com-remote-jobs-remote-software-engineer-tech-solutions-inc-1129462",
-      "source": "remoteok",
-      "source_url": "remoteok.com",
-      "source_id": "1129462",
-      "job_title": "Software Engineer",
-      "employer_name": "Tech Solutions Inc.",
-      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-software-engineer-tech-solutions-inc-1129462",
-      "job_description": "We are looking for a Software Engineer to join our team. You will be responsible for developing high-quality software solutions. Responsibilities include writing clean, scalable code, collaborating with other developers, and participating in code reviews. Requirements: Bachelor's degree in Computer Science or related field, experience with Java and Python, and strong problem-solving skills. Apply now and work remotely at Tech Solutions Inc.",
-      "job_employment_type": "FULLTIME",
-      "job_posted_at_datetime_utc": "2026-01-07T16:00:06.000Z",
-      "location": "San Francisco",
-      "locations": [
-        "San Francisco"
-      ],
-      "job_country": "USA",
-      "job_city": "San Francisco",
-      "job_state": null,
-      "salary_min": 80000,
-      "salary_max": 120000,
-      "job_min_salary": 80000,
-      "job_max_salary": 120000,
-      "tags": [
-        "software",
-        "code",
-        "java",
-        "engineer"
-      ],
-      "is_remote": true,
-      "job_is_remote": true,
-      "employer_logo": null,
-      "fetched_at": "2026-01-10T21:08:31.922Z",
-      "attribution": {
-        "source": "RemoteOK",
-        "url": "https://remoteok.com",
-        "required": "dofollow backlink"
-      },
-      "job_posted_at": "1h",
-      "description_platform": "generic",
-      "description_success": true
-    },
-    "status": "posted",
-    "addedAt": "2026-01-10T21:08:31.930Z",
-    "enrichedAt": "2026-01-10T21:08:36.162Z",
-    "postedAt": "2026-01-10T21:08:56.383Z"
-  },
-  {
-    "job": {
-      "id": "remoteok-com-remote-jobs-remote-software-engineer-tech-solutions-inc-1129437",
-      "source": "remoteok",
-      "source_url": "remoteok.com",
-      "source_id": "1129437",
-      "job_title": "Software Engineer",
-      "employer_name": "Tech Solutions Inc.",
-      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-software-engineer-tech-solutions-inc-1129437",
-      "job_description": "We are looking for a Software Engineer to join our team. The ideal candidate will have experience in developing scalable web applications and a passion for technology. Responsibilities include: - Designing and implementing new features - Collaborating with cross-functional teams - Troubleshooting and debugging applications - Writing clean, maintainable code Qualifications: - Bachelor's degree in Computer Science or related field - 3+ years of experience in software development - Proficiency in JavaScript, HTML, CSS, and React - Strong problem-solving skills This position is not remote. Apply now and work remotely at Tech Solutions Inc.",
-      "job_employment_type": "FULLTIME",
-      "job_posted_at_datetime_utc": "2026-01-05T20:00:13.000Z",
-      "location": "San Francisco",
-      "locations": [
-        "San Francisco"
-      ],
-      "job_country": "USA",
-      "job_city": "San Francisco",
-      "job_state": null,
-      "salary_min": 80000,
-      "salary_max": 120000,
-      "job_min_salary": 80000,
-      "job_max_salary": 120000,
-      "tags": [
-        "software",
-        "web",
-        "engineer"
-      ],
-      "is_remote": true,
-      "job_is_remote": true,
-      "employer_logo": null,
-      "fetched_at": "2026-01-10T21:08:31.922Z",
+      "fetched_at": "2026-01-18T01:17:35.684Z",
       "attribution": {
         "source": "RemoteOK",
         "url": "https://remoteok.com",
@@ -189,41 +136,43 @@
       "description_success": true
     },
     "status": "enriched",
-    "addedAt": "2026-01-10T21:08:31.930Z",
-    "enrichedAt": "2026-01-10T21:08:36.162Z",
+    "addedAt": "2026-01-18T01:17:35.693Z",
+    "enrichedAt": "2026-01-18T01:17:40.951Z",
     "postedAt": null
   },
   {
     "job": {
-      "id": "remoteok-com-remote-jobs-remote-online-hotel-reservationist-fully-destination-knot-1129404",
+      "id": "remoteok-com-remote-jobs-remote-account-executive-level-2-bloomerang-1129578",
       "source": "remoteok",
       "source_url": "remoteok.com",
-      "source_id": "1129404",
-      "job_title": "Online Hotel Reservationist Fully",
-      "employer_name": "Destination Knot",
-      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-online-hotel-reservationist-fully-destination-knot-1129404",
-      "job_description": "Job Title: Online Hotel Reservationist – Fully Remote About Destination Knot: At Destination Knot, we create seamless and memorable travel experiences by connecting clients to the perfect hotels, resorts, and accommodations across the globe. Whether it’s a luxury escape, romantic getaway, or family vacation, we’re committed to exceptional service and personalized planning from start to finish. Position Overview: We are seeking a highly organized and detail-oriented Online Hotel Reservationist to join our fully remote team. In this role, you’ll assist clients with hotel and resort bookings, manage reservation details, and ensure an accurate and smooth booking process. If you enjoy hospitality, customer service, and working behind the scenes to make travel dreams come true, this role is for you. Key Responsibilities: Assist clients with booking hotels, resorts, and other accommodations through online platforms Research and recommend lodging options based on destinati Apply now and work remotely at Destination Knot",
+      "source_id": "1129578",
+      "job_title": "Account Executive Level 2",
+      "employer_name": "Bloomerang",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-account-executive-level-2-bloomerang-1129578",
+      "job_description": "At Bloomerang, we believe change happens on purpose. We champion the power and potential of nonprofits, igniting next-level impact with the team and technology built for purpose. Our powerful giving platform and stellar support enable tens of thousands of nonprofits to raise more, recruit more, and retain more, fueling maximum impact and raising the bar on what's possible for the nonprofit sector. That's why, even as the nonprofit sector sees declines in giving, Bloomerang customers raise more year over year. We're also in the business of creating thriving employees. Join a mission-driven culture built on our core values of Simplify, Care and Act. We know our people are the key to our success, and we're proud to be home to some of the most innovative and skilled individuals in the workforce today. Come feel invigorated and unstoppable with us! &nbsp; The Role Are you ready to elevate purpose and make a tangible difference? As an Account Executive, you will be a trusted part Apply now and work remotely at Bloomerang",
       "job_employment_type": "FULLTIME",
-      "job_posted_at_datetime_utc": "2026-01-04T12:00:01.000Z",
-      "location": "New York",
+      "job_posted_at_datetime_utc": "2026-01-15T16:01:43.000Z",
+      "location": "Remote, US",
       "locations": [
-        "New York"
+        "Remote, US"
       ],
       "job_country": "USA",
-      "job_city": "New York",
-      "job_state": null,
+      "job_city": "Remote",
+      "job_state": "US",
       "salary_min": null,
       "salary_max": null,
       "job_min_salary": null,
       "job_max_salary": null,
       "tags": [
-        "growth",
-        "travel"
+        "support",
+        "software",
+        "sales",
+        "executive"
       ],
       "is_remote": true,
       "job_is_remote": true,
       "employer_logo": null,
-      "fetched_at": "2026-01-10T21:08:31.922Z",
+      "fetched_at": "2026-01-18T01:17:35.684Z",
       "attribution": {
         "source": "RemoteOK",
         "url": "https://remoteok.com",
@@ -234,8 +183,120 @@
       "description_success": true
     },
     "status": "posted",
-    "addedAt": "2026-01-10T21:08:31.930Z",
-    "enrichedAt": "2026-01-10T21:08:36.162Z",
-    "postedAt": "2026-01-10T21:08:56.383Z"
+    "addedAt": "2026-01-18T01:17:35.693Z",
+    "enrichedAt": "2026-01-18T01:17:40.951Z",
+    "postedAt": "2026-01-18T01:18:08.851Z"
+  },
+  {
+    "job": {
+      "id": "remoteok-com-remote-jobs-remote-product-designer-skio-1129544",
+      "source": "remoteok",
+      "source_url": "remoteok.com",
+      "source_id": "1129544",
+      "job_title": "Product Designer",
+      "employer_name": "Skio",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-product-designer-skio-1129544",
+      "job_description": "About Skio Skio helps Shopify brands turn one-time buyers into subscribers (and keep them). We ship new features every week because standing still means falling behind. We're competing against platforms that haven't changed in years, and we're winning. Ask our competitors where most of their customers come to when they grow out their platform (and we don’t expect this to change). That's why brands like Grüns, Everyday Dose, IM8, and Instant Hydration trust us with their subscription revenue. If you want to work somewhere that moves at startup speed but serves real enterprise brands, you're in the right place. We are looking for a talented Product Designer to help us create impactful, user-centric designs that drive the success of our product. If you are passionate about solving complex problems and thrive in a collaborative, dynamic startup environment, we'd love to meet you. Role Overview As a Product Designer at Skio, you will be responsible for leading the Apply now and work remotely at Skio",
+      "job_employment_type": "FULLTIME",
+      "job_posted_at_datetime_utc": "2026-01-13T13:00:02.000Z",
+      "location": "San Francisco, New York, or Remote",
+      "locations": [
+        "San Francisco, New York, or Remote"
+      ],
+      "job_country": "USA",
+      "job_city": "San Francisco",
+      "job_state": null,
+      "salary_min": null,
+      "salary_max": null,
+      "job_min_salary": null,
+      "job_max_salary": null,
+      "tags": [
+        "design",
+        "saas",
+        "system",
+        "designer",
+        "support",
+        "growth",
+        "engineering",
+        "shopify",
+        "digital nomad"
+      ],
+      "is_remote": true,
+      "job_is_remote": true,
+      "employer_logo": null,
+      "fetched_at": "2026-01-18T01:17:35.684Z",
+      "attribution": {
+        "source": "RemoteOK",
+        "url": "https://remoteok.com",
+        "required": "dofollow backlink"
+      },
+      "job_posted_at": "1h",
+      "description_platform": "generic",
+      "description_success": true
+    },
+    "status": "posted",
+    "addedAt": "2026-01-18T01:17:35.693Z",
+    "enrichedAt": "2026-01-18T01:17:40.951Z",
+    "postedAt": "2026-01-18T01:18:08.851Z"
+  },
+  {
+    "job": {
+      "id": "remoteok-com-remote-jobs-remote-forward-deployed-engineer-ai-inference-red-hat-inc-1129504",
+      "source": "remoteok",
+      "source_url": "remoteok.com",
+      "source_id": "1129504",
+      "job_title": "Forward Deployed Engineer AI Inference",
+      "employer_name": "Red Hat, Inc.",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-forward-deployed-engineer-ai-inference-red-hat-inc-1129504",
+      "job_description": "The vLLM and LLM-D Engineering team at Red Hat is looking for a customer obsessed developer to join our team as a Forward Deployed Engineer. In this role, you will not just build software; you will be the bridge between our cutting-edge inference platform (LLM-D, and vLLM) and our customers' most critical production environments. You will interface directly with the engineering teams at our customer to deploy, optimize, and scale distributed Large Language Model (LLM) inference systems. You will solve \"last mile\" infrastructure challenges that defy off-the-shelf solutions, ensuring that massive models run with low latency and high throughput on complex Kubernetes clusters. This is not a sales engineering role, you will be part of the core vLLM and LLM-D engineering team. What You Will Do Orchestrate Distributed Inference: Deploy and configure LLM-D and vLLM on Kubernetes clusters. You will set up and configure advanced deployment like disaggregated serving, KV-cache aware routing, KV C Apply now and work remotely at Red Hat, Inc.",
+      "job_employment_type": "FULLTIME",
+      "job_posted_at_datetime_utc": "2026-01-10T20:00:01.000Z",
+      "location": "Remote US MA",
+      "locations": [
+        "Remote US MA"
+      ],
+      "job_country": "USA",
+      "job_city": "Remote US MA",
+      "job_state": null,
+      "salary_min": null,
+      "salary_max": null,
+      "job_min_salary": null,
+      "job_max_salary": null,
+      "tags": [
+        "python",
+        "training",
+        "developer",
+        "software",
+        "code",
+        "travel",
+        "cloud",
+        "leader",
+        "sales",
+        "go",
+        "health",
+        "healthcare",
+        "engineer",
+        "engineering",
+        "recruitment",
+        "backend",
+        "digital nomad"
+      ],
+      "is_remote": true,
+      "job_is_remote": true,
+      "employer_logo": null,
+      "fetched_at": "2026-01-18T01:17:35.684Z",
+      "attribution": {
+        "source": "RemoteOK",
+        "url": "https://remoteok.com",
+        "required": "dofollow backlink"
+      },
+      "job_posted_at": "1h",
+      "description_platform": "generic",
+      "description_success": true
+    },
+    "status": "posted",
+    "addedAt": "2026-01-18T01:17:35.693Z",
+    "enrichedAt": "2026-01-18T01:17:40.951Z",
+    "postedAt": "2026-01-18T01:18:08.851Z"
   }
 ]

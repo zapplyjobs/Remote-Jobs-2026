@@ -75,7 +75,7 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 - 🔥 **Current Positions:** 5 hot data-focused jobs
 - **🏢 Companies**: 4 companies
-- 📅 **Last Updated:** January 10, 2026
+- 📅 **Last Updated:** January 18, 2026
 - 🤖 **Next Update:** Tomorrow at 9 AM UTC
 
 
@@ -122,11 +122,11 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 | Company | Role | Location | Posted | Level | Apply |
 |---------|------|----------|--------|-------|-------|
-| 🏢 **Zip** | Software Engineer Identity Access M... | San Francisc | 1d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-software-engineer-identity-access-management-zip-1129488) |
-| 🏢 **Tech Innovations Inc.** | Software Engineer | San Francisc | 1d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-software-engineer-tech-innovations-inc-1129486) |
-| 🏢 **Tech Solutions Inc.** | Software Engineer | San Francisc | 3d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-software-engineer-tech-solutions-inc-1129462) |
-| 🏢 **Tech Solutions Inc.** | Software Engineer 🏠 | San Francisc | 5d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-software-engineer-tech-solutions-inc-1129437) |
-| 🏢 **Destination Knot** | Online Hotel Reservationist Fully 🏠 | New York | 6d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-online-hotel-reservationist-fully-destination-knot-1129404) |
+| 🏢 **Bot Auto** | Machine Learning Engineer 3D Vision... | Houston, TX | 2d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-machine-learning-engineer-3d-visionlocalization-bot-auto-1129593) |
+| 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 2d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129591) |
+| 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 2d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129590) |
+| 🏢 **Bloomerang** | Account Executive Level 2 | Remote 🏠 | 2d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-level-2-bloomerang-1129578) |
+| 🏢 **Skio** | Product Designer 🏠 | San Francisc | 4d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-product-designer-skio-1129544) |
 
 
 
@@ -138,10 +138,10 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 ### 🏢 Top Companies (by current openings)
 
-- **Tech Solutions Inc.**: 2 positions
-- **Zip**: 1 position
-- **Tech Innovations Inc.**: 1 position
-- **Destination Knot**: 1 position
+- **Visual Concepts**: 2 positions
+- **Bot Auto**: 1 position
+- **Bloomerang**: 1 position
+- **Skio**: 1 position
 
 ---
 
@@ -150,14 +150,16 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 | Level               | Count | Percentage | Top Companies                     |
 |---------------------|-------|------------|-----------------------------------|
 | 🟢 Entry Level & New Grad | 1 | 20% | No or minimal experience |
-| 🟡 Beginner & Early Career | 3 | 60% | 1-2 years of experience |
-| 🔴 Manager | 1 | 20% | 2+ years of experience |
+| 🟡 Beginner & Early Career | 2 | 40% | 1-2 years of experience |
+| 🔴 Manager | 2 | 40% | 2+ years of experience |
 
 ---
 
 ### 🌍 Top Locations
-- **San Francisco**: 4 positions
-- **New York**: 1 positions
+- **Novato, CA**: 2 positions
+- **Houston, TX**: 1 positions
+- **Remote 🏠**: 1 positions
+- **San Francisco**: 1 positions
 
 ---
 
@@ -241,6 +243,29 @@ Add new jobs! See the [contributing guide](CONTRIBUTING.md).
 - Questions? Create a miscellaneous issue, and we’ll assist! 🙏
 
 
+---
+
+<details>
+<summary><h2>🗂️ <strong>ARCHIVED SWE JOBS</strong> - 1 Older Positions (7+ days old) - Click to Expand 👆</h2></summary>
+
+### 📊 **Archived Job Stats**
+- **📁 Total Jobs**: 1 positions
+- **🏢 Companies**: 4 companies
+- **⭐ FAANG+ Jobs & Internships**: 0 positions
+
+### 🏢 **Other Companies** (1 positions)
+
+| Company | Role | Location | Posted | Level | Apply |
+|---------|------|----------|--------|-------|-------|
+| 🏢 **Red Hat, Inc.** | Forward Deployed Engineer AI Infere... 🏠 | Remote US MA | 1w | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-forward-deployed-engineer-ai-inference-red-hat-inc-1129504) |
+
+
+
+</details>
+
+---
+
+
 
 ## More Resources
 
@@ -278,6 +303,6 @@ Add new jobs! See the [contributing guide](CONTRIBUTING.md).
 
 ---
 
-**Last Updated**: January 10, 2026 • **Next Update**: Daily at 9 AM UTC
+**Last Updated**: January 18, 2026 • **Next Update**: Daily at 9 AM UTC
 
 </div>
