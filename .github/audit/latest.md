@@ -1,5 +1,5 @@
 # Discord Bot Execution Audit
-**Timestamp:** 2026-01-19T14:26:34.266Z
+**Timestamp:** 2026-01-19T14:44:46.808Z
 **Exit Code:** ✅ Success
 ## Metrics
 - **Jobs Posted:** 0
@@ -8,61 +8,61 @@
 - **Database Saved:** ❌ No
 ## Sanitized Log Output
 ```
-[2026-01-19T14:26:30.651Z] ========================================
-[2026-01-19T14:26:30.653Z] Discord Bot Execution Log
-[2026-01-19T14:26:30.653Z] Environment: GitHub Actions
-[2026-01-19T14:26:30.653Z] Node Version: v20.19.6
-[2026-01-19T14:26:30.653Z] ========================================
-[2026-01-19T14:26:30.653Z] Environment Variables Check:
-[2026-01-19T14:26:30.653Z] DISCORD_TOKEN: ✅ Set
-[2026-01-19T14:26:30.653Z] DISCORD_CHANNEL_ID: ✅ Set
-[2026-01-19T14:26:30.653Z] DISCORD_CLIENT_ID: ✅ Set
-[2026-01-19T14:26:30.654Z] DISCORD_GUILD_ID: ✅ Set
-[2026-01-19T14:26:30.654Z] 
+[2026-01-19T14:44:44.366Z] ========================================
+[2026-01-19T14:44:44.368Z] Discord Bot Execution Log
+[2026-01-19T14:44:44.368Z] Environment: GitHub Actions
+[2026-01-19T14:44:44.368Z] Node Version: v20.19.6
+[2026-01-19T14:44:44.368Z] ========================================
+[2026-01-19T14:44:44.368Z] Environment Variables Check:
+[2026-01-19T14:44:44.368Z] DISCORD_TOKEN: ✅ Set
+[2026-01-19T14:44:44.368Z] DISCORD_CHANNEL_ID: ✅ Set
+[2026-01-19T14:44:44.369Z] DISCORD_CLIENT_ID: ✅ Set
+[2026-01-19T14:44:44.369Z] DISCORD_GUILD_ID: ✅ Set
+[2026-01-19T14:44:44.369Z] 
 Multi-Channel Configuration:
-[2026-01-19T14:26:30.654Z] DISCORD_TECH_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_SALES_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_MARKETING_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_FINANCE_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_HEALTHCARE_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_PRODUCT_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_SUPPLY_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_PM_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] DISCORD_HR_CHANNEL_ID: ⭕ Not set
-[2026-01-19T14:26:30.654Z] 
+[2026-01-19T14:44:44.369Z] DISCORD_TECH_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_SALES_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_MARKETING_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_FINANCE_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_HEALTHCARE_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_PRODUCT_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_SUPPLY_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.369Z] DISCORD_PM_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.370Z] DISCORD_HR_CHANNEL_ID: ⭕ Not set
+[2026-01-19T14:44:44.370Z] 
 Multi-Channel Mode: ⭕ DISABLED (using single-channel)
-[2026-01-19T14:26:30.654Z] 
+[2026-01-19T14:44:44.370Z] 
 Data Files Check:
-[2026-01-19T14:26:30.655Z] .github/data/new_jobs.json: ✅ Exists (0 items, 2 bytes)
-[2026-01-19T14:26:30.655Z] .github/data/posted_jobs.json: ✅ Exists (4 items, 3847 bytes)
-[2026-01-19T14:26:30.655Z] 
+[2026-01-19T14:44:44.370Z] .github/data/new_jobs.json: ✅ Exists (0 items, 2 bytes)
+[2026-01-19T14:44:44.370Z] .github/data/posted_jobs.json: ✅ Exists (4 items, 3847 bytes)
+[2026-01-19T14:44:44.370Z] 
 ========================================
-[2026-01-19T14:26:30.655Z] Starting Enhanced Discord Bot...
-[2026-01-19T14:26:30.655Z] ========================================
-[2026-01-19T14:26:31.133Z] [BOT] ✅ Loaded V2 database: 6 jobs
-[2026-01-19T14:26:32.590Z] [BOT] ✅ Enhanced Discord bot logged in as Zapply Jobs Bot#9522
-[2026-01-19T14:26:32.590Z] [BOT] 🔍 DEBUG: GUILD_ID = "CH_20db82b8" (type: string)
+[2026-01-19T14:44:44.370Z] Starting Enhanced Discord Bot...
+[2026-01-19T14:44:44.370Z] ========================================
+[2026-01-19T14:44:44.965Z] [BOT] ✅ Loaded V2 database: 6 jobs
+[2026-01-19T14:44:45.497Z] [BOT] ✅ Enhanced Discord bot logged in as Zapply Jobs Bot#9522
+[2026-01-19T14:44:45.497Z] [BOT] 🔍 DEBUG: GUILD_ID = "CH_20db82b8" (type: string)
 🔍 DEBUG: Bot is member of 1 guilds
    - Zapply (CH_20db82b8)
 🔍 Attempting to fetch guild: CH_20db82b8
-✅ Guild found: Zapply
-[2026-01-19T14:26:32.591Z] [BOT ERROR] (node:2315) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
+[2026-01-19T14:44:45.498Z] [BOT] ✅ Guild found: Zapply
+[2026-01-19T14:44:45.499Z] [BOT ERROR] (node:2303) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-01-19T14:26:32.885Z] [BOT] ✅ Loaded 1120 channels from guild
+[2026-01-19T14:44:45.814Z] [BOT] ✅ Loaded 1120 channels from guild
 🔍 Initializing channel auto-discovery...
-[2026-01-19T14:26:33.174Z] [BOT] 🔍 Discovered 120 channels in guild "Zapply"
-[2026-01-19T14:26:33.175Z] [BOT] ✅ Cached 88 channels (79 forum, 25 text)
-✅ Found 23 remote-* channels
-[2026-01-19T14:26:33.175Z] [BOT] ✅ All 23 required channels found
-[2026-01-19T14:26:33.175Z] [BOT] ✅ Bot initialized with multi-channel routing
-[2026-01-19T14:26:33.176Z] [BOT] 📍 Functional channels: 11
+[2026-01-19T14:44:46.001Z] [BOT] 🔍 Discovered 120 channels in guild "Zapply"
+[2026-01-19T14:44:46.001Z] [BOT] ✅ Cached 88 channels (79 forum, 25 text)
+[2026-01-19T14:44:46.001Z] [BOT] ✅ Found 23 remote-* channels
+[2026-01-19T14:44:46.002Z] [BOT] ✅ All 23 required channels found
+[2026-01-19T14:44:46.002Z] [BOT] ✅ Bot initialized with multi-channel routing
+[2026-01-19T14:44:46.002Z] [BOT] 📍 Functional channels: 11
 📍 Location channels: 12
 📍 Fallback channel ID: CH_f5bf382c
 ℹ️ No new jobs to post
-[2026-01-19T14:26:33.184Z] 
+[2026-01-19T14:44:46.012Z] 
 ========================================
 ```
 ## Errors Detected
-- [BOT ERROR] (node:2315) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
+- [BOT ERROR] (node:2303) DeprecationWarning: The ready event has been renamed to clientReady to distinguish it from the gateway READY event and will only emit under that name in v15. Please use clientReady instead.
 ---
 *Log sanitized for repository commit. Full logs available as GitHub Actions artifacts.*
