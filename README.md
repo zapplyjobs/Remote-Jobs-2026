@@ -75,7 +75,7 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 - 🔥 **Current Positions:** 5 hot data-focused jobs
 - **🏢 Companies**: 4 companies
-- 📅 **Last Updated:** January 18, 2026
+- 📅 **Last Updated:** January 19, 2026
 - 🤖 **Next Update:** Tomorrow at 9 AM UTC
 
 
@@ -280,6 +280,6 @@ Add new jobs! See the [contributing guide](CONTRIBUTING.md).
 
 ---
 
-**Last Updated**: January 18, 2026 • **Next Update**: Daily at 9 AM UTC
+**Last Updated**: January 19, 2026 • **Next Update**: Daily at 9 AM UTC
 
 </div>
