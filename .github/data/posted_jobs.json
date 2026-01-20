@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "lastUpdated": "2026-01-18T01:18:05.844Z",
+  "lastUpdated": "2026-01-20T19:30:10.194Z",
   "jobs": [
     {
       "id": "remoteok-com-remote-jobs-remote-machine-learning-engineer-3d-visionlocalization-bot-auto-1129593-2026-01-18-1",
@@ -67,14 +67,25 @@
       "sourceUrl": "https://remoteOK.com/remote-jobs/remote-product-designer-skio-1129544",
       "discordThreadId": "1462254671975677993",
       "instanceNumber": 1
+    },
+    {
+      "id": "remoteok-com-remote-jobs-remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641-2026-01-20-1",
+      "jobId": "remoteok-com-remote-jobs-remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641",
+      "company": "Destination Knot",
+      "title": "Work From Home Hotel Reservations Customer Service",
+      "postedToDiscord": "2026-01-20T19:30:10.194Z",
+      "sourceDate": "2026-01-19T16:00:53.000Z",
+      "sourceUrl": "https://remoteOK.com/remote-jobs/remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641",
+      "discordThreadId": "1463254289538351289",
+      "instanceNumber": 1
     }
   ],
   "metadata": {
-    "totalJobs": 6,
+    "totalJobs": 7,
     "migratedFromV1": true,
     "migrationDate": "2025-12-12T03:58:38.081Z",
     "lastArchive": {
-      "date": "2026-01-18T01:18:05.844Z",
+      "date": "2026-01-20T19:30:10.194Z",
       "archived": 0
     }
   }

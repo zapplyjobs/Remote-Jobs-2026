@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "remoteok-com-remote-jobs-remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641",
+    "source": "remoteok",
+    "source_url": "remoteok.com",
+    "source_id": "1129641",
+    "job_title": "Work From Home Hotel Reservations Customer Service",
+    "employer_name": "Destination Knot",
+    "job_apply_link": "https://remoteOK.com/remote-jobs/remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641",
+    "job_description": "Job Title: Work From Home – Hotel Reservations – Customer Service Company: Destination Knot Job Type: Flexible Schedule | Remote Work About Destination Knot: Destination Knot is a dedicated travel planning company that specializes in creating personalized travel experiences for clients, including hotel accommodations, cruises, and group trips. We pride ourselves on excellent customer service and helping travelers turn their dream vacations into reality. Position Overview: Destination Knot is seeking enthusiastic and customer-focused individuals to join our team as Hotel Reservations Customer Service Representatives. In this remote role, you’ll assist clients in exploring hotel options, answering questions, and handling reservations to ensure seamless travel planning. This position is perfect for those who enjoy working with people, love the travel industry, and thrive in a virtual work environment. Comprehensive training and ongoing support are provided. \\ Apply now and work remotely at Destination Knot",
+    "job_employment_type": "FULLTIME",
+    "job_posted_at_datetime_utc": "2026-01-19T16:00:53.000Z",
+    "location": "Atlanta, Georgia",
+    "locations": [
+      "Atlanta, Georgia"
+    ],
+    "job_country": "USA",
+    "job_city": "Atlanta",
+    "job_state": null,
+    "salary_min": null,
+    "salary_max": null,
+    "job_min_salary": null,
+    "job_max_salary": null,
+    "tags": [
+      "training",
+      "support",
+      "travel",
+      "sales",
+      "non tech"
+    ],
+    "is_remote": true,
+    "job_is_remote": true,
+    "employer_logo": null,
+    "fetched_at": "2026-01-20T19:30:04.305Z",
+    "attribution": {
+      "source": "RemoteOK",
+      "url": "https://remoteok.com",
+      "required": "dofollow backlink"
+    },
+    "job_posted_at": "1h",
+    "description_platform": "generic",
+    "description_success": true
+  }
+]
