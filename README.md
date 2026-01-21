@@ -123,11 +123,11 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 | Company | Role | Location | Posted | Level | Apply |
 |---------|------|----------|--------|-------|-------|
 | 🏢 **Lone Wolf Technologies** | Account Executive | United State | 1d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-lone-wolf-technologies-1129657) |
-| 🏢 **Destination Knot** | Work From Home Hotel Reservations C... 🏠 | Atlanta | 1d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641) |
+| 🏢 **Destination Knot** | Work From Home Hotel Reservations C... 🏠 | Atlanta | 2d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641) |
 | 🏢 **Bot Auto** | Machine Learning Engineer 3D Vision... | Houston, TX | 5d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-machine-learning-engineer-3d-visionlocalization-bot-auto-1129593) |
 | 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 5d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129591) |
 | 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 5d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129590) |
-| 🏢 **Bloomerang** | Account Executive Level 2 | Remote 🏠 | 5d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-level-2-bloomerang-1129578) |
+| 🏢 **Bloomerang** | Account Executive Level 2 | Remote 🏠 | 6d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-level-2-bloomerang-1129578) |
 
 
 
