@@ -8,8 +8,8 @@
 <br>
 
 <!-- Row 1: Job Stats (Custom Static Badges) -->
-![Total Jobs](https://img.shields.io/badge/Total_Jobs-52-brightgreen?style=flat&logo=briefcase)
-![Companies](https://img.shields.io/badge/Companies-4-blue?style=flat&logo=building)
+![Total Jobs](https://img.shields.io/badge/Total_Jobs-50-brightgreen?style=flat&logo=briefcase)
+![Companies](https://img.shields.io/badge/Companies-3-blue?style=flat&logo=building)
 
 ![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
 ![License](https://img.shields.io/badge/License-CC--BY--NC--4.0-purple?style=flat&logo=creativecommons)
@@ -35,7 +35,7 @@
 
 </div>
 
-<p align="center">🚀 Real-time software engineering, programming, and IT jobs from 4 companies like Tesla, NVIDIA, and Raytheon. Updated every 24 hours with 5 fresh opportunities for data analysts, scientists, and entry-level software developers.</p>
+<p align="center">🚀 Real-time software engineering, programming, and IT jobs from 3 companies like Tesla, NVIDIA, and Raytheon. Updated every 24 hours with 3 fresh opportunities for data analysts, scientists, and entry-level software developers.</p>
 
 <p align="center">🎯 Includes roles across tech giants, fast-growing startups, and engineering-first companies like Chewy, CACI, and TD Bank.</p>
 
@@ -73,8 +73,8 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 <img src="images/stats.png" alt="Real-time counts of roles and companies.">
 
-- 🔥 **Current Positions:** 5 hot data-focused jobs
-- **🏢 Companies**: 4 companies
+- 🔥 **Current Positions:** 3 hot data-focused jobs
+- **🏢 Companies**: 3 companies
 - 📅 **Last Updated:** January 22, 2026
 - 🤖 **Next Update:** Tomorrow at 9 AM UTC
 
@@ -118,15 +118,13 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 <img src="images/ngj-listings.png" alt="Fresh 2026 job listings (under 1 week).">
 
-### 🏢 **Other Companies** (5 positions)
+### 🏢 **Other Companies** (3 positions)
 
 | Company | Role | Location | Posted | Level | Apply |
 |---------|------|----------|--------|-------|-------|
 | 🏢 **Lone Wolf Technologies** | Account Executive | United State | 2d | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-lone-wolf-technologies-1129657) |
 | 🏢 **Destination Knot** | Work From Home Hotel Reservations C... 🏠 | Atlanta | 3d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-work-from-home-hotel-reservations-customer-service-destination-knot-1129641) |
 | 🏢 **Bot Auto** | Machine Learning Engineer 3D Vision... | Houston, TX | 6d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-machine-learning-engineer-3d-visionlocalization-bot-auto-1129593) |
-| 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 6d | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129591) |
-| 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 6d | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129590) |
 
 
 
@@ -138,7 +136,6 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 ### 🏢 Top Companies (by current openings)
 
-- **Visual Concepts**: 2 positions
 - **Lone Wolf Technologies**: 1 position
 - **Destination Knot**: 1 position
 - **Bot Auto**: 1 position
@@ -149,14 +146,13 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 | Level               | Count | Percentage | Top Companies                     |
 |---------------------|-------|------------|-----------------------------------|
-| 🟢 Entry Level & New Grad | 2 | 40% | No or minimal experience |
-| 🟡 Beginner & Early Career | 2 | 40% | 1-2 years of experience |
-| 🔴 Manager | 1 | 20% | 2+ years of experience |
+| 🟢 Entry Level & New Grad | 1 | 33% | No or minimal experience |
+| 🟡 Beginner & Early Career | 1 | 33% | 1-2 years of experience |
+| 🔴 Manager | 1 | 34% | 2+ years of experience |
 
 ---
 
 ### 🌍 Top Locations
-- **Novato, CA**: 2 positions
 - **United States (Remote)**: 1 positions
 - **Atlanta**: 1 positions
 - **Houston, TX**: 1 positions
@@ -165,7 +161,7 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 
 ### 🔮 Why Software Engineers Choose Our Job Board
 
-✅ **100% Real Jobs**: 5 verified roles for Software Engineering roles from 4 companies.
+✅ **100% Real Jobs**: 3 verified roles for Software Engineering roles from 3 companies.
 <br>
 ✅ **Fresh Daily Updates**: Live data from Tesla, Raytheon, Chewy, and CACI refreshed every 24 hours automatically.
 <br>
@@ -243,6 +239,30 @@ Add new jobs! See the [contributing guide](CONTRIBUTING.md).
 - Questions? Create a miscellaneous issue, and we’ll assist! 🙏
 
 
+---
+
+<details>
+<summary><h2>🗂️ <strong>ARCHIVED SWE JOBS</strong> - 2 Older Positions (7+ days old) - Click to Expand 👆</h2></summary>
+
+### 📊 **Archived Job Stats**
+- **📁 Total Jobs**: 2 positions
+- **🏢 Companies**: 3 companies
+- **⭐ FAANG+ Jobs & Internships**: 0 positions
+
+### 🏢 **Other Companies** (2 positions)
+
+| Company | Role | Location | Posted | Level | Apply |
+|---------|------|----------|--------|-------|-------|
+| 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 1w | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129591) |
+| 🏢 **Visual Concepts** | Character Artist Clothing NBA 2K | Novato, CA | 1w | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-character-artist-clothing-nba-2k-visual-concepts-1129590) |
+
+
+
+</details>
+
+---
+
+
 
 ## More Resources
 
@@ -272,7 +292,7 @@ Add new jobs! See the [contributing guide](CONTRIBUTING.md).
 
 <div align="center">
 
-**🎯 5 current opportunities from 4 companies**
+**🎯 3 current opportunities from 3 companies**
 
 **Found this helpful? Give it a ⭐ to support Zapply!**
 
