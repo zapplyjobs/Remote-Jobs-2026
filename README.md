@@ -243,29 +243,6 @@ Add new jobs! See the [contributing guide](CONTRIBUTING.md).
 - Questions? Create a miscellaneous issue, and we’ll assist! 🙏
 
 
----
-
-<details>
-<summary><h2>🗂️ <strong>ARCHIVED SWE JOBS</strong> - 1 Older Positions (7+ days old) - Click to Expand 👆</h2></summary>
-
-### 📊 **Archived Job Stats**
-- **📁 Total Jobs**: 1 positions
-- **🏢 Companies**: 4 companies
-- **⭐ FAANG+ Jobs & Internships**: 0 positions
-
-### 🏢 **Other Companies** (1 positions)
-
-| Company | Role | Location | Posted | Level | Apply |
-|---------|------|----------|--------|-------|-------|
-| 🏢 **Bloomerang** | Account Executive Level 2 | Remote 🏠 | 1w | ![Senior](https://img.shields.io/badge/-Senior-red "Senior-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-account-executive-level-2-bloomerang-1129578) |
-
-
-
-</details>
-
----
-
-
 
 ## More Resources
 
