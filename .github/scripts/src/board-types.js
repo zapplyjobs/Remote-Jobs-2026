@@ -263,131 +263,27 @@ const BOARD_CONFIGS = {
 
   [BOARD_TYPES.REMOTE]: {
     name: 'Remote Jobs 2026',
-    description: 'Remote-only positions',
+    description: 'Remote-only positions (posts to New-Grad-Jobs Discord)',
     channelMode: 'discovery',  // Auto-discover channels by name
     channelType: 'text',
     envPrefix: null,  // Not used in discovery mode
 
-    // Functional channels (11 channels, prefixed with 'remote-')
+    // Posts to New-Grad-Jobs Discord channels (2026-01-23)
+    // Single industry channel for all remote jobs
     industryChannels: [
       {
-        key: 'tech',
-        channelName: 'remote-tech',
-        description: 'Software engineering, DevOps, QA'
-      },
-      {
-        key: 'ai',
-        channelName: 'remote-ai',
-        description: 'ML, AI, Data Science'
-      },
-      {
-        key: 'data-science',
-        channelName: 'remote-data-science',
-        description: 'Data analysts, scientists'
-      },
-      {
-        key: 'sales',
-        channelName: 'remote-sales',
-        description: 'Sales roles'
-      },
-      {
-        key: 'marketing',
-        channelName: 'remote-marketing',
-        description: 'Marketing positions'
-      },
-      {
-        key: 'finance',
-        channelName: 'remote-finance',
-        description: 'Finance, accounting'
-      },
-      {
-        key: 'healthcare',
-        channelName: 'remote-healthcare',
-        description: 'Healthcare tech'
-      },
-      {
-        key: 'product',
-        channelName: 'remote-product',
-        description: 'Product management'
-      },
-      {
-        key: 'supply-chain',
-        channelName: 'remote-supply-chain',
-        description: 'Supply chain roles'
-      },
-      {
-        key: 'project-management',
-        channelName: 'remote-project-management',
-        description: 'PM roles'
-      },
-      {
-        key: 'hr',
-        channelName: 'remote-hr',
-        description: 'HR positions'
+        key: 'jobs',
+        channelName: 'remote-jobs',
+        description: 'All remote job positions'
       }
     ],
 
-    // Location channels (12 channels, prefixed with 'remote-')
+    // Single location channel (posts to New-Grad's remote-usa-jobs)
     locationChannels: [
       {
-        key: 'usa',
-        channelName: 'remote-usa',
+        key: 'usa-jobs',
+        channelName: 'remote-usa-jobs',
         cities: ['Remote', 'USA']
-      },
-      {
-        key: 'new-york',
-        channelName: 'remote-new-york',
-        cities: ['New York']
-      },
-      {
-        key: 'austin',
-        channelName: 'remote-austin',
-        cities: ['Austin']
-      },
-      {
-        key: 'chicago',
-        channelName: 'remote-chicago',
-        cities: ['Chicago']
-      },
-      {
-        key: 'seattle',
-        channelName: 'remote-seattle',
-        cities: ['Seattle']
-      },
-      {
-        key: 'redmond',
-        channelName: 'remote-redmond',
-        cities: ['Redmond']
-      },
-      {
-        key: 'mountain-view',
-        channelName: 'remote-mountain-view',
-        cities: ['Mountain View']
-      },
-      {
-        key: 'san-francisco',
-        channelName: 'remote-san-francisco',
-        cities: ['San Francisco']
-      },
-      {
-        key: 'sunnyvale',
-        channelName: 'remote-sunnyvale',
-        cities: ['Sunnyvale']
-      },
-      {
-        key: 'san-bruno',
-        channelName: 'remote-san-bruno',
-        cities: ['San Bruno']
-      },
-      {
-        key: 'boston',
-        channelName: 'remote-boston',
-        cities: ['Boston']
-      },
-      {
-        key: 'los-angeles',
-        channelName: 'remote-los-angeles',
-        cities: ['Los Angeles']
       }
     ],
 
