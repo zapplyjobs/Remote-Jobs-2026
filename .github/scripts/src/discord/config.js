@@ -1,40 +1,21 @@
 /**
- * Discord Channel Configuration for Remote-Jobs-2026
+ * Discord Channel Configuration - Remote-Jobs-2026
  *
- * Channel name definitions only - IDs auto-discovered at runtime
- * No environment variables needed (except DISCORD_TOKEN and DISCORD_GUILD_ID)
+ * UPDATED 2026-01-23: Migrated to board types system
+ * - Uses src/board-types.js for portable configuration
+ * - Board type: REMOTE (auto-discovery mode)
+ * - Channel type: TEXT channels (auto-discovered)
+ * - No environment variables needed (except DISCORD_TOKEN and DISCORD_GUILD_ID)
  */
 
-// Functional channels (role/domain-based routing)
-const FUNCTIONAL_CHANNELS = [
-  'remote-tech',              // Software engineering, DevOps, QA
-  'remote-ai',                // ML, AI, Data Science
-  'remote-data-science',      // Data analysts, scientists
-  'remote-sales',             // Sales roles
-  'remote-marketing',         // Marketing positions
-  'remote-finance',           // Finance, accounting
-  'remote-healthcare',        // Healthcare tech
-  'remote-product',           // Product management
-  'remote-supply-chain',      // Supply chain roles
-  'remote-project-management', // PM roles
-  'remote-hr'                 // HR positions
-];
+const { BOARD_TYPES, getBoardConfig } = require('../board-types');
 
-// Location-specific channels (city/region-based routing)
-const LOCATION_CHANNELS = [
-  'remote-usa',           // General US remote
-  'remote-new-york',      // NY-based remote
-  'remote-austin',        // Austin-based remote
-  'remote-chicago',       // Chicago-based remote
-  'remote-seattle',       // Seattle-based remote
-  'remote-redmond',       // Redmond-based remote
-  'remote-mountain-view', // Mountain View-based remote
-  'remote-san-francisco', // SF-based remote
-  'remote-sunnyvale',     // Sunnyvale-based remote
-  'remote-san-bruno',     // San Bruno-based remote
-  'remote-boston',        // Boston-based remote
-  'remote-los-angeles'    // LA-based remote
-];
+// Use the REMOTE board type template (auto-discovery mode)
+const remoteBoard = getBoardConfig(BOARD_TYPES.REMOTE);
+
+// Extract channel names from the board type
+const FUNCTIONAL_CHANNELS = remoteBoard.industryChannels.map(ch => ch.channelName);
+const LOCATION_CHANNELS = remoteBoard.locationChannels.map(ch => ch.channelName);
 
 // All required channels (for validation)
 const ALL_REQUIRED_CHANNELS = [
