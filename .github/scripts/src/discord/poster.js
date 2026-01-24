@@ -111,9 +111,10 @@ function generateTags(job) {
 /**
  * Build Discord embed for a job posting
  * @param {Object} job - Job object
+ * @param {Object} options - Optional metadata { channelName, channelJobNumber }
  * @returns {EmbedBuilder} Discord embed
  */
-function buildJobEmbed(job) {
+function buildJobEmbed(job, options = {}) {
   const tags = generateTags(job);
   const company = companies.faang_plus.find(c => c.name === job.employer_name) ||
                   companies.unicorn_startups.find(c => c.name === job.employer_name) ||
@@ -125,6 +126,30 @@ function buildJobEmbed(job) {
   // Build title - only use company emoji if company is found
   // Note: Don't include emoji in title for forum posts as Discord handles it differently
   const title = job.job_title;
+
+  // Determine posted date display (show both Discord and Company dates if different)
+  const now = new Date();
+  const companyDate = job.job_posted_at_datetime_utc ? new Date(job.job_posted_at_datetime_utc) : null;
+  const daysDifference = companyDate ? Math.floor((now - companyDate) / (1000 * 60 * 60 * 24)) : 0;
+
+  let postedValue;
+  if (daysDifference > 7 && companyDate) {
+    // Show both dates when >7 days apart
+    const discordDateStr = now.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    });
+    const companyDateStr = companyDate.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    });
+    postedValue = `Discord: ${discordDateStr}\nCompany: ${companyDateStr}`;
+  } else {
+    // Show single date if recent or no company date
+    postedValue = formatPostedDate(job.job_posted_at_datetime_utc);
+  }
 
   const embed = new EmbedBuilder()
     .setTitle(title)
@@ -141,7 +166,7 @@ function buildJobEmbed(job) {
             : `${job.job_city || 'Not specified'}, ${job.job_state || 'Remote'}`,
         inline: true
       },
-      { name: '💰 Posted', value: formatPostedDate(job.job_posted_at_datetime_utc), inline: true }
+      { name: '💰 Posted', value: postedValue, inline: true }
     );
 
   // Add tags field with hashtag formatting
@@ -150,6 +175,18 @@ function buildJobEmbed(job) {
       name: '🏷️ Tags',
       value: tags.map(tag => `#${tag}`).join(' '),
       inline: false
+    });
+  }
+
+  // Add footer with job number if channel info provided
+  if (options.channelName && options.channelJobNumber) {
+    const postedDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+    embed.setFooter({
+      text: `Job #${options.channelJobNumber} in #${options.channelName} | Posted: ${postedDate}`
     });
   }
 
@@ -179,6 +216,143 @@ function buildActionRow(job) {
   }
 
   return row;
+}
+
+/**
+ * Get emoji for job based on category (NEW for text messages)
+ * @param {Object} job - Job object
+ * @returns {string} Emoji character
+ */
+function getJobEmoji(job) {
+  const title = job.job_title.toLowerCase();
+  const description = (job.job_description || '').toLowerCase();
+
+  // AI/ML jobs
+  if (title.includes('machine learning') || title.includes('ml engineer') ||
+      title.includes('ai') || title.includes('deep learning')) {
+    return '🤖';
+  }
+
+  // Data Science jobs
+  if (title.includes('data scientist') || title.includes('data engineer') ||
+      title.includes('data analyst') || title.includes('analytics')) {
+    return '📊';
+  }
+
+  // Security jobs
+  if (title.includes('security') || title.includes('infosec')) {
+    return '🔒';
+  }
+
+  // Product jobs
+  if (title.includes('product manager') || title.includes('pm ')) {
+    return '📱';
+  }
+
+  // Default for software/tech jobs
+  return '🏢';
+}
+
+/**
+ * Format location string for text message (NEW for text messages)
+ * @param {Object} job - Job object
+ * @returns {string} Formatted location
+ */
+function formatLocation(job) {
+  if (job._multipleLocations && job._multipleLocations.length > 1) {
+    return job._multipleLocations.map(loc => loc.charAt(0).toUpperCase() + loc.slice(1)).join(', ');
+  }
+
+  if (job.job_city && job.job_city.toLowerCase() === 'remote') {
+    return 'Remote';
+  }
+
+  const city = job.job_city || 'Not specified';
+  const state = job.job_state || '';
+
+  return state ? `${city}, ${state}` : city;
+}
+
+/**
+ * Build text message content for job posting (NEW for text messages)
+ * @param {Object} job - Job object
+ * @returns {string} Formatted message text
+ */
+function buildJobMessage(job) {
+  const emoji = getJobEmoji(job);
+  const location = formatLocation(job);
+  const postedDate = formatPostedDate(job.job_posted_at_datetime_utc);
+  const tags = generateTags(job).map(t => `#${t}`).join(' ');
+
+  // Clean and truncate description
+  const description = job.job_description || '';
+  const cleanedDescription = cleanJobDescription(description, job.description_format || 'unknown');
+  const preview = cleanedDescription.substring(0, 200);
+  const hasMore = cleanedDescription.length > 200;
+
+  // Build message
+  const message = [
+    `${emoji} **${job.job_title}** @ **${job.employer_name}**`,
+    '',
+    `📍 ${location} | 💰 ${postedDate}`,
+    `🏷️ ${tags}`,
+    '',
+    preview + (hasMore ? '...' : ''),
+    hasMore ? '... Read More' : '',
+    '',
+    `🔗 [Apply Now](${job.job_apply_link})`
+  ].filter(line => line !== '').join('\n');
+
+  return message;
+}
+
+/**
+ * Post a job to a Discord text channel (NEW for text messages)
+ * @param {Object} job - Job object from API
+ * @param {Object} channel - Discord channel object
+ * @param {Object} options - Optional metadata { channelJobNumber }
+ * @returns {Promise<Object>} Result object with success status and message ID
+ */
+async function postJobToChannel(job, channel, options = {}) {
+  return discordApiCall(
+    async () => {
+      const jobId = generateJobId(job);
+
+      // Build embed with channel info if provided
+      const embedOptions = {
+        channelName: channel.name,
+        channelJobNumber: options.channelJobNumber
+      };
+      const embed = buildJobEmbed(job, embedOptions);
+      const actionRow = buildActionRow(job);
+
+      // Build message data (embed only, no text content)
+      const messageData = {
+        embeds: [embed]
+      };
+
+      // Only add components if actionRow has buttons
+      if (actionRow.components.length > 0) {
+        messageData.components = [actionRow];
+      }
+
+      // Post to text channel
+      const message = await channel.send(messageData);
+
+      console.log(`✅ Posted message: ${job.job_title} @ ${job.employer_name} in #${channel.name}`);
+
+      return {
+        success: true,
+        messageId: message.id,
+        channelId: channel.id,
+        message: message
+      };
+    },
+    `Post job ${job.job_title} @ ${job.employer_name}`
+  ).catch(error => {
+    console.error(`❌ Error posting job ${job.job_title}:`, error);
+    return { success: false, error };
+  });
 }
 
 /**
@@ -274,5 +448,10 @@ module.exports = {
   generateTags,
   buildJobEmbed,
   buildActionRow,
-  postJobToForum
+  postJobToForum,
+  // NEW for text messages
+  getJobEmoji,
+  formatLocation,
+  buildJobMessage,
+  postJobToChannel
 };
