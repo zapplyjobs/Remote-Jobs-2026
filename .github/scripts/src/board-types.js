@@ -269,14 +269,9 @@ const BOARD_CONFIGS = {
     envPrefix: null,  // Not used in discovery mode
 
     // Posts to New-Grad-Jobs Discord channels (2026-01-23)
-    // Single industry channel for all remote jobs
-    industryChannels: [
-      {
-        key: 'jobs',
-        channelName: 'remote-jobs',
-        description: 'All remote job positions'
-      }
-    ],
+    // UPDATED 2026-01-24: Removed remote-jobs channel (user deleted it)
+    // Now only posts to remote-usa-jobs channel
+    industryChannels: [],
 
     // Single location channel (posts to New-Grad's remote-usa-jobs)
     locationChannels: [
