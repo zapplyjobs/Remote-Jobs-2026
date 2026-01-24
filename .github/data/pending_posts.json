@@ -1,1 +1,49 @@
-[]
+[
+  {
+    "job": {
+      "id": "remoteok-com-remote-jobs-remote-full-stack-software-engineer-regard-1129728",
+      "source": "remoteok",
+      "source_url": "remoteok.com",
+      "source_id": "1129728",
+      "job_title": "Full Stack Software Engineer",
+      "employer_name": "Regard",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-full-stack-software-engineer-regard-1129728",
+      "job_description": "As a Full-Stack Software Engineer at Regard, you'll be involved in all stages of the product development and deployment lifecycle: idea generation, planning, design, prototyping, execution, deployment, and iteration of new and existing features. You'll collaborate closely with engineering, design, and product teams to bring new features and products to life. Your primary objective will be to develop high-quality software solutions that meet user needs and align with the organization's business goals. This includes analyzing requirements, designing robust architectures, writing efficient code, and conducting thorough testing. You'll be responsible for contributing to high-priority projects and continuous improvement initiatives. By delivering innovative and reliable software, you'll help drive the success of our organization and make a meaningful impact on the industry. About Regard Our mission is to bring world-class healthcare to everyone. Regard is an AI-powered Proactive Docume Apply now and work remotely at Regard",
+      "job_employment_type": "FULLTIME",
+      "job_posted_at_datetime_utc": "2026-01-23T16:00:47.000Z",
+      "location": "New York, NY",
+      "locations": [
+        "New York, NY"
+      ],
+      "job_country": "USA",
+      "job_city": "New York",
+      "job_state": "NY",
+      "salary_min": null,
+      "salary_max": null,
+      "job_min_salary": null,
+      "job_max_salary": null,
+      "tags": [
+        "software",
+        "full-stack",
+        "healthcare",
+        "engineer"
+      ],
+      "is_remote": true,
+      "job_is_remote": true,
+      "employer_logo": null,
+      "fetched_at": "2026-01-24T23:05:46.533Z",
+      "attribution": {
+        "source": "RemoteOK",
+        "url": "https://remoteok.com",
+        "required": "dofollow backlink"
+      },
+      "job_posted_at": "1h",
+      "description_platform": "generic",
+      "description_success": true
+    },
+    "status": "enriched",
+    "addedAt": "2026-01-24T23:05:46.541Z",
+    "enrichedAt": "2026-01-24T23:05:46.644Z",
+    "postedAt": null
+  }
+]
