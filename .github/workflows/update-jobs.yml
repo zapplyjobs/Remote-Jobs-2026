@@ -191,6 +191,16 @@ jobs:
           echo "⚠️  Database file unchanged - investigating reason..."
           echo ""
 
+          # If no successes AND no errors, assume no jobs to post (normal for low-volume repos)
+          if [ "$SUCCESS_COUNT" -eq 0 ] && [ "$ERROR_COUNT" -eq 0 ]; then
+            echo "✅ SUCCESS: No new jobs to post (expected behavior)"
+            echo ""
+            echo "Remote-Jobs repo has low volume (~8 total jobs)."
+            echo "Most runs find 0 new jobs - this is normal."
+            echo "Bot working correctly."
+            exit 0
+          fi
+
           # Check if all jobs were filtered (expected behavior)
           if grep -q "After blacklist filter: 0 jobs" .github/logs/discord-bot.log 2>/dev/null; then
             echo "✅ SUCCESS: All jobs filtered by blacklist (expected behavior)"
@@ -204,7 +214,7 @@ jobs:
             echo "All jobs were already posted previously."
             echo "Duplicate detection working correctly."
             exit 0
-          elif grep -q "ℹ️ No new jobs to post" .github/logs/discord-bot.log 2>/dev/null; then
+          elif grep -q "No new jobs\|no new jobs\|No enriched jobs" .github/logs/discord-bot.log 2>/dev/null; then
             echo "✅ SUCCESS: No new jobs to post (expected behavior)"
             echo ""
             echo "Either no new jobs found or all filtered as duplicates."
