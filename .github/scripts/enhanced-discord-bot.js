@@ -24,6 +24,7 @@ const { normalizeJob } = require('./src/utils/job-normalizer');
 const { formatPostedDate, cleanJobDescription } = require('./src/utils/job-formatters');
 const PostedJobsManager = require('./src/data/posted-jobs-manager-v2');
 const SubscriptionManager = require('./src/data/subscription-manager');
+const { postJobToChannel } = require('./src/discord/poster');
 
 // Global channel discovery instance
 let channelDiscovery = null;
