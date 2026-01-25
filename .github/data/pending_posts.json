@@ -93,5 +93,55 @@
     "addedAt": "2026-01-25T00:29:45.063Z",
     "enrichedAt": "2026-01-25T00:29:45.138Z",
     "postedAt": null
+  },
+  {
+    "job": {
+      "id": "remoteok-com-remote-jobs-remote-x-memes-and-headline-commentary-tutor-xai-1129749",
+      "source": "remoteok",
+      "source_url": "remoteok.com",
+      "source_id": "1129749",
+      "job_title": "X Memes and Headline Commentary Tutor",
+      "employer_name": "xAI",
+      "job_apply_link": "https://remoteOK.com/remote-jobs/remote-x-memes-and-headline-commentary-tutor-xai-1129749",
+      "job_description": "About xAI xAI's mission is to create AI systems that can accurately understand the universe and aid humanity in its pursuit of knowledge. Our team is small, highly motivated, and focused on engineering excellence. This organization is for individuals who appreciate challenging themselves and thrive on curiosity. We operate with a flat organizational structure. All employees are expected to be hands-on and to contribute directly to the company's mission. Leadership is given to those who show initiative and consistently deliver excellence. Work ethic and strong prioritization skills are important. All engineers are expected to have strong communication skills. They should be able to concisely and accurately share knowledge with their teammates.About the Role As an an AI Tutor focused on memes and headline commentary for the X platform, you will support xAI's mission by training and refining Grok to better grasp social media behaviors, such as viral trends, memes, and user interacti Apply now and work remotely at xAI",
+      "job_employment_type": "FULLTIME",
+      "job_posted_at_datetime_utc": "2026-01-24T06:00:04.000Z",
+      "location": "Palo Alto, CA",
+      "locations": [
+        "Palo Alto, CA"
+      ],
+      "job_country": "USA",
+      "job_city": "Palo Alto",
+      "job_state": "CA",
+      "salary_min": null,
+      "salary_max": null,
+      "job_min_salary": null,
+      "job_max_salary": null,
+      "tags": [
+        "tutor",
+        "training",
+        "technical",
+        "support",
+        "software",
+        "content",
+        "engineering"
+      ],
+      "is_remote": true,
+      "job_is_remote": true,
+      "employer_logo": null,
+      "fetched_at": "2026-01-25T06:09:33.875Z",
+      "attribution": {
+        "source": "RemoteOK",
+        "url": "https://remoteok.com",
+        "required": "dofollow backlink"
+      },
+      "job_posted_at": "1h",
+      "description_platform": "generic",
+      "description_success": true
+    },
+    "status": "enriched",
+    "addedAt": "2026-01-25T06:09:33.884Z",
+    "enrichedAt": "2026-01-25T06:09:33.964Z",
+    "postedAt": null
   }
 ]
