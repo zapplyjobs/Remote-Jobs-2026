@@ -39,5 +39,47 @@
     "job_posted_at": "1h",
     "description_platform": "generic",
     "description_success": true
+  },
+  {
+    "id": "remoteok-com-remote-jobs-remote-fully-customer-service-booking-hotels-destination-knot-1129731",
+    "source": "remoteok",
+    "source_url": "remoteok.com",
+    "source_id": "1129731",
+    "job_title": "Fully Customer Service Booking Hotels",
+    "employer_name": "Destination Knot",
+    "job_apply_link": "https://remoteOK.com/remote-jobs/remote-fully-customer-service-booking-hotels-destination-knot-1129731",
+    "job_description": "Job Title: Customer Service – Booking Hotels | Work From Home Job Type: Flexible Schedule | Remote Work About Us: We are a trusted travel planning company specializing in personalized vacations, hotel accommodations, cruises, and group travel. We’re committed to delivering excellent customer service and helping travelers create unforgettable experiences around the world. Position Overview: We are looking for friendly, detail-oriented individuals to join our team as Customer Service Representatives focused on hotel bookings. In this remote role, you will assist clients with researching, planning, and securing hotel accommodations that fit their preferences and needs. This position is ideal for those who enjoy helping people, love travel, and thrive in a virtual work environment. Comprehensive training and ongoing support are provided to help you succeed. Key Responsibilities: Assist clients in selecting and booking hotel accommodations Provide accurate inform Apply now and work remotely at Destination Knot",
+    "job_employment_type": "FULLTIME",
+    "job_posted_at_datetime_utc": "2026-01-24T00:00:40.000Z",
+    "location": "New York",
+    "locations": [
+      "New York"
+    ],
+    "job_country": "USA",
+    "job_city": "New York",
+    "job_state": null,
+    "salary_min": null,
+    "salary_max": null,
+    "job_min_salary": null,
+    "job_max_salary": null,
+    "tags": [
+      "training",
+      "support",
+      "travel",
+      "sales",
+      "non tech"
+    ],
+    "is_remote": true,
+    "job_is_remote": true,
+    "employer_logo": null,
+    "fetched_at": "2026-01-25T00:29:45.054Z",
+    "attribution": {
+      "source": "RemoteOK",
+      "url": "https://remoteok.com",
+      "required": "dofollow backlink"
+    },
+    "job_posted_at": "1h",
+    "description_platform": "generic",
+    "description_success": true
   }
 ]
