@@ -60,6 +60,8 @@ jobs:
       env:
         # RemoteOK API requires no authentication or external data sources
         ENABLE_MARKDOWN_CONVERSION: true  # Feature flag: Set to 'true' to enable HTML-to-Markdown conversion
+        # Database retention window (14 days to catch slow-updating sources)
+        ACTIVE_WINDOW_DAYS: 14
 
     - name: Display job-fetcher logs (always run)
       if: always()
