@@ -16,7 +16,7 @@ on:
 # Prevent concurrent runs to avoid git conflicts
 concurrency:
   group: job-updates-${{ github.repository }}
-  cancel-in-progress: false  # Don't cancel, wait for previous to finish
+  cancel-in-progress: true  # Cancel stuck workflows to allow fresh runs
 
 jobs:
   update-jobs:
