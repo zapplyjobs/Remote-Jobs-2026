@@ -98,7 +98,7 @@ jobs:
 
     - name: Post new jobs via Enhanced Bot
       run: |
-        node .github/scripts/save-discord-logs.js 2>&1 | tee .github/logs/discord-bot.log
+        node .github/scripts/enhanced-discord-bot.js 2>&1 | tee .github/logs/discord-bot.log
       env:
         DISCORD_TOKEN:       ${{ secrets.DISCORD_TOKEN }}
         DISCORD_CHANNEL_ID:  ${{ secrets.DISCORD_CHANNEL_ID }}
@@ -161,7 +161,7 @@ jobs:
         # First, check posting results (graceful handling of partial failures)
         # Note: grep -c outputs "0" when no matches found, but exit code 1
         # Use || true to prevent pipeline failure, then default to 0 if empty
-        SUCCESS_COUNT=$(grep -c "✅ Created forum post" .github/logs/discord-bot.log 2>/dev/null || true)
+        SUCCESS_COUNT=$(grep -oP "Successfully posted: \K\d+" .github/logs/discord-bot.log 2>/dev/null || true)
         ERROR_COUNT=$(grep -c "❌ Error posting job" .github/logs/discord-bot.log 2>/dev/null || true)
         CHANNEL_FULL_COUNT=$(grep -c "160006\|channel.*full\|max.*thread" .github/logs/discord-bot.log 2>/dev/null || true)
 
