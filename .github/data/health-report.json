@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-01-28T23:58:07.624Z",
+  "totalJobs": 8,
+  "postedJobs": 6,
+  "unpostedJobs": 2,
+  "postingRate": "75.00",
+  "jobsWithDiscordPosts": 0,
+  "jobsWithZeroChannels": 0,
+  "jobsWithLegacyPost": 6,
+  "jobsNeverProcessed": 2,
+  "channelDistribution": {},
+  "companiesAffected": {},
+  "unpostedJobsSample": []
+}

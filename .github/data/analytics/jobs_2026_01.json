@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "month": "2026_01",
+  "created": "2026-01-29T15:52:52.041Z",
+  "lastUpdated": "2026-01-29T15:52:52.041Z",
+  "jobCount": 6,
+  "jobs": [
+    {
+      "id": "zora-zora",
+      "title": "Zora",
+      "company": "ZORA",
+      "location": "New York City",
+      "category": "unknown",
+      "datePosted": "2026-01-28T01:00:33.000Z",
+      "dateSeen": "2026-01-29T15:52:52.041Z",
+      "routedTo": null,
+      "url": "https://remoteOK.com/remote-jobs/remote-zora-zora-1129849"
+    },
+    {
+      "id": "khan-academy-fullstack-engineer-ii-tutor-platform",
+      "title": "Fullstack Engineer II Tutor Platform",
+      "company": "Khan Academy",
+      "location": "Mountain View, CA",
+      "category": "unknown",
+      "datePosted": "2026-01-27T16:00:48.000Z",
+      "dateSeen": "2026-01-29T15:52:52.041Z",
+      "routedTo": null,
+      "url": "https://remoteOK.com/remote-jobs/remote-fullstack-engineer-ii-tutor-platform-khan-academy-1129832"
+    },
+    {
+      "id": "allied-global-marketing-assistant-video-game-partnerships",
+      "title": "Assistant Video Game Partnerships",
+      "company": "Allied Global Marketing",
+      "location": "Los Angeles",
+      "category": "unknown",
+      "datePosted": "2026-01-27T00:04:49.000Z",
+      "dateSeen": "2026-01-29T15:52:52.041Z",
+      "routedTo": null,
+      "url": "https://remoteOK.com/remote-jobs/remote-assistant-video-game-partnerships-allied-global-marketing-1129812"
+    },
+    {
+      "id": "arbol-data-scientist",
+      "title": "Data Scientist",
+      "company": "Arbol",
+      "location": "New York City, New York",
+      "category": "unknown",
+      "datePosted": "2026-01-27T00:01:14.000Z",
+      "dateSeen": "2026-01-29T15:52:52.041Z",
+      "routedTo": null,
+      "url": "https://remoteOK.com/remote-jobs/remote-data-scientist-arbol-1129785"
+    },
+    {
+      "id": "xai-fullstack-engineer-education",
+      "title": "Fullstack Engineer Education",
+      "company": "xAI",
+      "location": "Palo Alto, CA",
+      "category": "unknown",
+      "datePosted": "2026-01-25T16:00:07.000Z",
+      "dateSeen": "2026-01-29T15:52:52.041Z",
+      "routedTo": null,
+      "url": "https://remoteOK.com/remote-jobs/remote-fullstack-engineer-education-xai-1129766"
+    },
+    {
+      "id": "xai-x-memes-and-headline-commentary-tutor",
+      "title": "X Memes and Headline Commentary Tutor",
+      "company": "xAI",
+      "location": "Palo Alto, CA",
+      "category": "unknown",
+      "datePosted": "2026-01-24T06:00:04.000Z",
+      "dateSeen": "2026-01-29T15:52:52.041Z",
+      "routedTo": null,
+      "url": "https://remoteOK.com/remote-jobs/remote-x-memes-and-headline-commentary-tutor-xai-1129749"
+    }
+  ]
+}
