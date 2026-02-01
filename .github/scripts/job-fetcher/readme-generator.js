@@ -591,6 +591,8 @@ ${archivedJobs.length > 0 ? generateArchivedSection(archivedJobs, currentStats) 
 
 <div align="center">
 
+---
+
 **🎯 ${currentJobs.length} current opportunities from ${totalCompanies} companies**
 
 **Found this helpful? Give it a ⭐ to support Zapply!**
