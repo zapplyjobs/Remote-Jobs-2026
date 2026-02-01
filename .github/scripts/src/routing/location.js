@@ -152,13 +152,16 @@ function getJobLocationChannel(job) {
     }
   }
 
-  // 5. Remote USA - Only if explicitly remote AND US-based
+  // 5. Remote USA - Use blacklist approach (exclude non-US locations)
   // Check for remote indicators in LOCATION fields (job_city, job_state) OR strong remote keywords
   const isRemoteLocation = city.includes('remote') || state.includes('remote');
-  const hasStrongRemoteKeyword = /\b(remote|work from home|wfh|distributed|anywhere|location independent)\b/.test(combined);
-  const isUSBased = /\b(usa|united states|u\.s\.|us only|us-based|us remote)\b/.test(combined);
+  const hasStrongRemoteKeyword = /\b(remote|work from home|wfh|distributed|anywhere|location independent)\b/i.test(combined);
 
-  if ((isRemoteLocation || hasStrongRemoteKeyword) && isUSBased) {
+  // Detect non-US locations (common countries/cities that would indicate non-US remote)
+  const hasNonUSLocation = /\b(london|paris|berlin|toronto|vancouver|montreal|sydney|melbourne|tokyo|singapore|hong kong|dubai|mumbai|bangalore)\b/i.test(combined);
+
+  // Remote jobs without explicit non-US locations go to remote-usa
+  if ((isRemoteLocation || hasStrongRemoteKeyword) && !hasNonUSLocation) {
     return LOCATION_CHANNEL_CONFIG['remote-usa'];
   }
 
