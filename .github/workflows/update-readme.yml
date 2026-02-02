@@ -9,7 +9,7 @@ name: Update README Only
 on:
   workflow_dispatch:  # Manual trigger only
   push:
-    branches: [ master ]
+    branches: [ ${{ github.ref_name }} ]
     paths:
       - '.github/scripts/job-fetcher/readme-generator.js'
       - '.github/scripts/job-fetcher/update-readme-only.js'
@@ -27,7 +27,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        ref: master
+        ref: ${{ github.ref_name }}
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -71,7 +71,7 @@ jobs:
         No new jobs fetched (existing data refreshed)
         Triggered by: ${{ github.event_name }}"
 
-        git push origin master
+        git push origin ${{ github.ref_name }}
 
     - name: Create job summary
       run: |
