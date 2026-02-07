@@ -1,5 +1,6 @@
 const fs = require("fs");
-const companyCategory = require("./software.json");
+const path = require("path");
+const jobCategories = require("./job_categories.json");
 const {
   companies,
   ALL_COMPANIES,
@@ -7,34 +8,72 @@ const {
   getCompanyCareerUrl,
   formatTimeAgo,
   getExperienceLevel,
-  getJobCategory,
   formatLocation,
 } = require("./utils");
+
+// Fallback empty company category for Remote-Jobs-2026 (uses job categories instead)
+const companyCategory = {
+  remote_companies: {
+    companies: [],
+    emoji: "🏠",
+    title: "Remote Companies"
+  }
+};
+
+// Helper function to categorize a job based on keywords
+function getJobCategoryFromKeywords(jobTitle, jobDescription = '') {
+  const text = `${jobTitle} ${jobDescription}`.toLowerCase();
+
+  // Check each category's keywords
+  for (const [categoryKey, categoryData] of Object.entries(jobCategories)) {
+    for (const keyword of categoryData.keywords) {
+      if (text.includes(keyword.toLowerCase())) {
+        return categoryKey;
+      }
+    }
+  }
+
+  return 'software_engineering'; // Default fallback
+}
+
+// Path to repo root README.md
+const REPO_README_PATH = path.join(__dirname, '../../../README.md');
 
 // Filter jobs by age (1 week = 7 days)
 function filterJobsByAge(allJobs) {
   const oneWeekAgo = new Date();
   oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-  
+
   const currentJobs = allJobs.filter(job => {
     const jobDate = new Date(job.job_posted_at_datetime_utc);
     return jobDate >= oneWeekAgo;
   });
-  
+
   const archivedJobs = allJobs.filter(job => {
     const jobDate = new Date(job.job_posted_at_datetime_utc);
     return jobDate < oneWeekAgo;
   });
-  
+
   return { currentJobs, archivedJobs };
 }
 
+// Filter out senior positions - only keep Entry-Level and Mid-Level
+function filterOutSeniorPositions(jobs) {
+  return jobs.filter(job => {
+    const level = getExperienceLevel(job.job_title, job.job_description);
+    return level !== "Senior";
+  });
+}
+
 // Generate enhanced job table with better formatting
-// Import or load the JSON configuration
 
 function generateJobTable(jobs) {
   console.log(`🔍 DEBUG: Starting generateJobTable with ${jobs.length} total jobs`);
-  
+
+  // Filter out senior positions
+  jobs = filterOutSeniorPositions(jobs);
+  console.log(`🔍 DEBUG: After filtering seniors: ${jobs.length} jobs remaining`);
+
   if (jobs.length === 0) {
     return `| Company | Role | Location | Posted | Level | Apply |
 |---------|------|----------|--------|-------|-------|
@@ -406,9 +445,14 @@ ${internshipData.sources
 function generateArchivedSection(archivedJobs, stats) {
   if (archivedJobs.length === 0) return "";
 
-  const archivedFaangJobs = archivedJobs.filter((job) =>
-    companies.faang_plus.some((c) => c.name === job.employer_name)
-  ).length;
+  // Get top category from archived jobs
+  const categoryCounts = {};
+  archivedJobs.forEach(job => {
+    const cat = getJobCategoryFromKeywords(job.job_title, job.job_description);
+    const catTitle = jobCategories[cat]?.title || 'Software Engineering';
+    categoryCounts[catTitle] = (categoryCounts[catTitle] || 0) + 1;
+  });
+  const topCategory = Object.entries(categoryCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'Software Engineering';
 
   return `
 ---
@@ -421,7 +465,7 @@ function generateArchivedSection(archivedJobs, stats) {
 ### 📊 **Archived Job Stats**
 - **📁 Total Jobs**: ${archivedJobs.length} positions
 - **🏢 Companies**: ${Object.keys(stats.totalByCompany).length} companies
-- **⭐ FAANG+ Jobs & Internships**: ${archivedFaangJobs} positions
+- **🏷️ Top Category**: ${topCategory}
 
 ${generateJobTable(archivedJobs)}
 
@@ -457,26 +501,27 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
     const location = formatLocation(job.job_city, job.job_state);
     currentStats.byLocation[location] = (currentStats.byLocation[location] || 0) + 1;
 
-    // Count by category
-    const category = getJobCategory(job.job_title, job.job_description);
-    currentStats.byCategory[category] = (currentStats.byCategory[category] || 0) + 1;
+    // Count by category (using new job categories)
+    const categoryKey = getJobCategoryFromKeywords(job.job_title, job.job_description);
+    const categoryTitle = jobCategories[categoryKey]?.title || 'Software Engineering';
+    currentStats.byCategory[categoryTitle] = (currentStats.byCategory[categoryTitle] || 0) + 1;
 
     // Count by company
     const company = job.employer_name;
     currentStats.totalByCompany[company] = (currentStats.totalByCompany[company] || 0) + 1;
   });
 
-  const totalCurrentJobs = (currentStats.byLevel["Entry-Level"] || 0) + 
-                           (currentStats.byLevel["Mid-Level"] || 0) + 
+  const totalCurrentJobs = (currentStats.byLevel["Entry-Level"] || 0) +
+                           (currentStats.byLevel["Mid-Level"] || 0) +
                            (currentStats.byLevel["Senior"] || 0);
 
   const totalCompanies = Object.keys(currentStats.totalByCompany).length;
-  const faangJobs = currentJobs.filter((job) =>
-    companyCategory.faang_plus?.companies?.some(name => 
-      job.employer_name.toLowerCase().includes(name.toLowerCase()) || 
-      name.toLowerCase().includes(job.employer_name.toLowerCase())
-    )
-  ).length;
+
+  // Get top category for badge
+  const topCategoryEntry = Object.entries(currentStats.byCategory).sort((a, b) => b[1] - a[1])[0];
+  const topCategory = topCategoryEntry?.[0] || 'Software Engineering';
+  const topCategoryCount = topCategoryEntry?.[1] || 0;
+  const topCategoryBadge = topCategory.replace(/\s+/g, '_').substring(0, 15);
 
   return `<div align="center">
 
@@ -486,9 +531,9 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
 # Remote Jobs 2026
 
 <!-- Row 1: Job Stats (Custom Static Badges) -->
-![Total Jobs](https://img.shields.io/badge/Total_Jobs-${currentJobs.length + 47}-brightgreen?style=flat&logo=briefcase) ![Companies](https://img.shields.io/badge/Companies-${totalCompanies}-blue?style=flat&logo=building) ${faangJobs > 0 ? '![FAANG+ Jobs](https://img.shields.io/badge/FAANG+_Jobs-' + faangJobs + '-red?style=flat&logo=star) ' : ''}![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
+![Total Jobs](https://img.shields.io/badge/Total_Jobs-${currentJobs.length + 47}-brightgreen?style=flat&logo=briefcase) ![Companies](https://img.shields.io/badge/Companies-${totalCompanies}-blue?style=flat&logo=building) ![${topCategory.substring(0, 10)}](https://img.shields.io/badge/${topCategoryBadge}-${topCategoryCount}-red?style=flat&logo=star) ![Updated](https://img.shields.io/badge/Updated-Every_15_Minutes-orange?style=flat&logo=calendar)
 
-</div> 
+</div>
 
 <p align="center">🚀 Real-time software engineering, programming, and IT jobs from ${totalCompanies} companies like Tesla, NVIDIA, and Raytheon. Updated every 24 hours with ${currentJobs.length} fresh opportunities for data analysts, scientists, and entry-level software developers.</p>
 
@@ -529,9 +574,9 @@ Connect with fellow job seekers, get career advice, share experiences, and stay 
 <p align="center">
   <a href="https://discord.gg/UswBsduwcD"><img src="images/discord-2d.png" alt="Visit Our Website" width="250"></a>
   &nbsp;&nbsp;
-  <a href="https://www.instagram.com/zapplyjobs"><img src="images/instagram-icon-2d.png" alt="Instagram" height="75"></a>
+  <a href="https://www.instagram.com/zapplyjobs"><img src="images/instagram-icon-2d.png" alt="Instagram" width="75"></a>
   &nbsp;&nbsp;
-  <a href="https://www.tiktok.com/@zapplyjobs"><img src="images/tiktok-icon-2d.png" alt="TikTok" height="75"></a>
+  <a href="https://www.tiktok.com/@zapplyjobs"><img src="images/tiktok-icon-2d.png" alt="TikTok" width="75"></a>
 </p>
 
 ---
@@ -625,7 +670,7 @@ async function updateReadme(allJobs, existingArchivedJobs = [], internshipData, 
       internshipData,
       stats
     );
-    fs.writeFileSync("README.md", readmeContent, "utf8");
+    fs.writeFileSync(REPO_README_PATH, readmeContent, "utf8");
     console.log(`✅ README.md updated with ${currentJobs.length} current jobs`);
 
     console.log("\n📊 Summary:");
