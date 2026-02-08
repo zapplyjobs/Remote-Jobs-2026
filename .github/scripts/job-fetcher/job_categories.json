@@ -2,26 +2,108 @@
   "software_engineering": {
     "title": "Software Engineering",
     "emoji": "💻",
-    "keywords": ["software engineer", "software engineering", "software development", "software developer", "swe"]
+    "keywords": [
+      "software engineer",
+      "software engineering",
+      "software development",
+      "software developer",
+      "swe",
+      "application developer",
+      "backend engineer",
+      "backend developer",
+      "systems engineer",
+      "java developer",
+      "python developer",
+      "javascript developer",
+      "android developer",
+      "ios developer",
+      "mobile developer",
+      "frontend engineer",
+      "frontend developer",
+      "full stack engineer",
+      "web developer",
+      "it engineer"
+    ]
   },
   "full_stack_frontend": {
     "title": "Full Stack & Frontend",
     "emoji": "🌐",
-    "keywords": ["full stack", "fullstack", "frontend", "front-end", "front end", "web developer", "react developer"]
+    "keywords": [
+      "full stack",
+      "fullstack",
+      "frontend",
+      "front-end",
+      "front end",
+      "web developer",
+      "react developer",
+      "vue developer",
+      "angular developer",
+      "typescript developer",
+      "ui engineer",
+      "ux engineer"
+    ]
   },
-  "data_science_analytics": {
-    "title": "Data Science & Analytics",
-    "emoji": "📊",
-    "keywords": ["data science", "data scientist", "data analyst", "analytics", "business analyst", "statistician"]
+  "data_ai": {
+    "title": "Data & AI",
+    "emoji": "🤖",
+    "keywords": [
+      "machine learning",
+      "ml engineer",
+      "ai engineer",
+      "artificial intelligence",
+      "deep learning",
+      "computer vision",
+      "nlp",
+      "data science",
+      "data scientist",
+      "data analyst",
+      "analytics",
+      "business analyst",
+      "statistician",
+      "data engineer",
+      "research scientist"
+    ]
   },
   "product_design": {
     "title": "Product & Design",
     "emoji": "🎨",
-    "keywords": ["product manager", "product owner", "ux designer", "ui designer", "design", "product design"]
+    "keywords": [
+      "product manager",
+      "product owner",
+      "product analyst",
+      "technical product manager",
+      "ux designer",
+      "ui designer",
+      "ux researcher",
+      "user experience",
+      "user interface",
+      "product designer",
+      "interaction designer",
+      "design researcher",
+      "service designer"
+    ]
   },
   "devops_infrastructure": {
     "title": "DevOps & Infrastructure",
     "emoji": "🔧",
-    "keywords": ["devops", "sre", "site reliability", "infrastructure", "cloud engineer", "platform engineer"]
+    "keywords": [
+      "devops",
+      "sre",
+      "site reliability",
+      "infrastructure",
+      "cloud engineer",
+      "platform engineer",
+      "devsecops",
+      "reliability engineer",
+      "cloud architect",
+      "solutions architect",
+      "database administrator",
+      "system administrator",
+      "it operations",
+      "operations specialist",
+      "devops engineer",
+      "site reliability engineer",
+      "infrastructure engineer"
+    ]
   }
 }
