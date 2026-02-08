@@ -484,6 +484,9 @@ async function generateReadme(currentJobs, archivedJobs = [], internshipData = n
     day: "numeric",
   });
 
+  // Filter out senior positions BEFORE calculating stats and badge counts
+  currentJobs = filterOutSeniorPositions(currentJobs);
+
   // Calculate stats from currentJobs only (not archived)
   const currentStats = {
     byLevel: {},

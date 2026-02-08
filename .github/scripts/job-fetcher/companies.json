@@ -1,0 +1,128 @@
+{
+  "tech_companies": [
+    {
+      "name": "GitLab",
+      "emoji": "🦊",
+      "career_url": "https://about.gitlab.com/jobs",
+      "api_names": ["gitlab"]
+    },
+    {
+      "name": "GitHub",
+      "emoji": "🐙",
+      "career_url": "https://github.com/about/careers",
+      "api_names": ["github"]
+    },
+    {
+      "name": "Automattic",
+      "emoji": "🤖",
+      "career_url": "https://automattic.com/work-with-us",
+      "api_names": ["automattic", "wordpress"]
+    },
+    {
+      "name": "Zapier",
+      "emoji": "⚡",
+      "career_url": "https://zapier.com/jobs",
+      "api_names": ["zapier"]
+    },
+    {
+      "name": "Buffer",
+      "emoji": "📊",
+      "career_url": "https://buffer.com/journey",
+      "api_names": ["buffer"]
+    },
+    {
+      "name": "Doist",
+      "emoji": "✅",
+      "career_url": "https://doist.com/careers",
+      "api_names": ["doist"]
+    },
+    {
+      "name": "Basecamp",
+      "emoji": "⛺️",
+      "career_url": "https://basecamp.com/about/jobs",
+      "api_names": ["basecamp"]
+    },
+    {
+      "name": "Shopify",
+      "emoji": "🛍️",
+      "career_url": "https://www.shopify.com/careers",
+      "api_names": ["shopify"]
+    },
+    {
+      "name": "Twilio",
+      "emoji": "📞",
+      "career_url": "https://www.twilio.com/company/jobs",
+      "api_names": ["twilio"]
+    },
+    {
+      "name": "Stripe",
+      "emoji": "💳",
+      "career_url": "https://stripe.com/jobs",
+      "api_names": ["stripe"]
+    }
+  ],
+  "finance_crypto": [
+    {
+      "name": "Coinbase",
+      "emoji": "🪙",
+      "career_url": "https://www.coinbase.com/careers",
+      "api_names": ["coinbase"]
+    },
+    {
+      "name": "Block",
+      "emoji": "⬜",
+      "career_url": "https://www.block.xyz/careers",
+      "api_names": ["block", "square"]
+    },
+    {
+      "name": "Robinhood",
+      "emoji": "🏹",
+      "career_url": "https://robinhood.com/careers",
+      "api_names": ["robinhood"]
+    },
+    {
+      "name": "Plaid",
+      "emoji": "🔗",
+      "career_url": "https://plaid.com/careers",
+      "api_names": ["plaid"]
+    },
+    {
+      "name": "Chime",
+      "emoji": "💰",
+      "career_url": "https://www.chime.com/careers",
+      "api_names": ["chime"]
+    }
+  ],
+  "education": [
+    {
+      "name": "Coursera",
+      "emoji": "📚",
+      "career_url": "https://www.coursera.org/about/careers",
+      "api_names": ["coursera"]
+    },
+    {
+      "name": "Udemy",
+      "emoji": "📖",
+      "career_url": "https://about.udemy.com/careers",
+      "api_names": ["udemy"]
+    },
+    {
+      "name": "Khan Academy",
+      "emoji": "🎓",
+      "career_url": "https://www.khanacademy.org/careers",
+      "api_names": ["khan academy"]
+    },
+    {
+      "name": "Duolingo",
+      "emoji": "🦉",
+      "career_url": "https://careers.duolingo.com",
+      "api_names": ["duolingo"]
+    },
+    {
+      "name": "Chegg",
+      "emoji": "📚",
+      "career_url": "https://www.chegg.com/careers",
+      "api_names": ["chegg"]
+    }
+  ]
+}
