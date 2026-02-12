@@ -113,20 +113,17 @@ Questions? Create a miscellaneous issue, and we'll assist! 🙏
 ---
 
 <details>
-<summary><h2>🗂️ <strong>ARCHIVED SWE JOBS</strong> - 10 Older Positions (7+ days old) - Click to Expand 👆</h2></summary>
+<summary><h2>🗂️ <strong>ARCHIVED SWE JOBS</strong> - 6 Older Positions (7+ days old) - Click to Expand 👆</h2></summary>
 
 ### 📊 **Archived Job Stats**
-- **📁 Total Jobs**: 10 positions
+- **📁 Total Jobs**: 6 positions
 - **🏢 Companies**: 0 companies
 - **🏷️ Top Category**: Software Engineering
 
-### 🏢 **Other Companies** (4 positions)
+### 🏢 **Other Companies** (1 positions)
 
 | Company | Role | Location | Posted | Level | Apply |
 |---------|------|----------|--------|-------|-------|
-| 🏢 **ZORA** | Zora 🏠 | New York Cit | 1w ago | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-zora-zora-1129849) |
-| 🏢 **Khan Academy** | Fullstack Engineer II Tutor Platfor... 🏠 | Mountain Vie | 1w ago | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-fullstack-engineer-ii-tutor-platform-khan-academy-1129832) |
-| 🏢 **Arbol** | Data Scientist 🏠 | New York Cit | 2w ago | ![Mid](https://img.shields.io/badge/-Mid-yellow "Mid-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://remoteOK.com/remote-jobs/remote-data-scientist-arbol-1129785) |
 | 🏢 **Sweve Tech Ltd** | Project Manager (100% Remote, US Ba... 🏠 | Remote | 2w ago | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://jobgether.com/offer/69766fa673a8e8b5e77ae8da-project-manager-100-remote-us-based-full-time?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic) |
 
 
@@ -149,6 +146,6 @@ Questions? Create a miscellaneous issue, and we'll assist! 🙏
 
 ---
 
-**Last Updated**: February 10, 2026 • **Next Update**: Daily at 9 AM UTC
+**Last Updated**: February 12, 2026 • **Next Update**: Daily at 9 AM UTC
 
 </div>
