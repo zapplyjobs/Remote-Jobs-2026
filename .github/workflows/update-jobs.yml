@@ -64,6 +64,12 @@ jobs:
           echo "Total positions: $JOB_COUNT"
         fi
 
+    - name: Generate workflow metrics
+      if: always()
+      run: |
+        mkdir -p .github/data
+        node .github/scripts/output-metrics.js || echo "Metrics generation failed (non-blocking)"
+
     - name: Check for changes
       id: verify-changed-files
       run: |
