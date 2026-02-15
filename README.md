@@ -124,7 +124,7 @@ Questions? Create a miscellaneous issue, and we'll assist! 🙏
 
 | Company | Role | Location | Posted | Level | Apply |
 |---------|------|----------|--------|-------|-------|
-| 🏢 **Sweve Tech Ltd** | Project Manager (100% Remote, US Ba... 🏠 | Remote | 2w ago | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://jobgether.com/offer/69766fa673a8e8b5e77ae8da-project-manager-100-remote-us-based-full-time?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic) |
+| 🏢 **Sweve Tech Ltd** | Project Manager (100% Remote, US Ba... 🏠 | Remote | 3w ago | ![Entry](https://img.shields.io/badge/-Entry-brightgreen "Entry-Level") | [<img src="images/apply.png" width="75" alt="Apply">](https://jobgether.com/offer/69766fa673a8e8b5e77ae8da-project-manager-100-remote-us-based-full-time?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic) |
 
 
 
@@ -146,6 +146,6 @@ Questions? Create a miscellaneous issue, and we'll assist! 🙏
 
 ---
 
-**Last Updated**: February 12, 2026 • **Next Update**: Daily at 9 AM UTC
+**Last Updated**: February 15, 2026 • **Next Update**: Daily at 9 AM UTC
 
 </div>
